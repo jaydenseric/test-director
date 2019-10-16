@@ -1,0 +1,42 @@
+
+Test: [1mTest with sub tests.[22m
+  
+  Test: [1mPassing test.[22m
+  
+  Test: [1mFailing test with standard error.[22m
+    
+    [31mMessage.[39m
+    
+    [31m[2mtestDirector2.add (fixtures/fails.js:11:11)[22m[39m
+    [31m[2mTestDirector.run (index.js:114:15)[22m[39m
+    [31m[2m<anonymous>[22m[39m
+    [31m[2m[22m[39m
+  
+  Test: [1mFailing test with assertion error.[22m
+    
+    [31mfalse == true[39m
+    
+    [31m[2mtestDirector2.add (fixtures/fails.js:14:5)[22m[39m
+    [31m[2mTestDirector.run (index.js:114:15)[22m[39m
+    [31m[2m<anonymous>[22m[39m
+    [31m[2m[22m[39m
+  
+  [31m[1m[31m1/3 tests passed.[31m[22m[39m
+  
+  [31m[2mTestDirector.run (index.js:139:33)[22m[39m
+  [31m[2m<anonymous>[22m[39m
+  [31m[2m[22m[39m
+
+Test: [1mPassing test.[22m
+
+Test: [1mFailing test with standard error.[22m
+  
+  [31mMessage.[39m
+  
+  [31m[2mtestDirector1.add (fixtures/fails.js:22:9)[22m[39m
+  [31m[2mTestDirector.run (index.js:114:15)[22m[39m
+  [31m[2m<anonymous>[22m[39m
+  [31m[2m[22m[39m
+
+[1m[31m1/3 tests passed.[39m[22m
+

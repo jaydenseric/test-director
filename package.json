@@ -1,0 +1,54 @@
+{
+  "name": "test-director",
+  "private": true,
+  "description": "An ultra lightweight unit test director for Node.js.",
+  "license": "MIT",
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "https://jaydenseric.com"
+  },
+  "repository": "github:jaydenseric/test-director",
+  "homepage": "https://github.com/jaydenseric/test-director#readme",
+  "bugs": "https://github.com/jaydenseric/test-director/issues",
+  "keywords": [
+    "test",
+    "director"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.5"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "stack-utils": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-env": "^10.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import-order-alphabetical": "^1.0.0",
+    "eslint-plugin-jsdoc": "^15.11.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jsdoc-md": "^4.0.1",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
+    "prepare:jsdoc": "jsdoc-md",
+    "prepare:prettier": "prettier readme.md --write",
+    "update-snapshots": "./scripts/update-snapshots.sh",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:snapshots",
+    "test:eslint": "eslint .",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "test:snapshots": "./scripts/test-snapshots.sh",
+    "prepublishOnly": "npm test"
+  }
+}
