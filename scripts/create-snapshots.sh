@@ -28,13 +28,13 @@ do
   snapshotPathPasses="$snapshotPath/stdout-passes.txt"
   snapshotPathFails="$snapshotPath/stdout-fails.txt"
 
-  # The `> /dev/null` silences output, the `|| :` prevents a possible/expected
-  # non-zero exit status from the script being snapshotted from affecting the
-  # surrounding script’s exit status.
+  # `--color` forces the `chalk` npm package to display colors, as it normally
+  # wouldn’t in this situation. `|| :` prevents an expected or possible non-zero
+  # exit status from the script being snapshotted from affecting this script.
 
   echo "Creating $snapshotPathPasses"
-  script -q $snapshotPathPasses node ./fixtures/passes.js > /dev/null || :
+  node ./fixtures/passes.js --color &> $snapshotPathPasses || :
 
   echo "Creating $snapshotPathFails"
-  script -q $snapshotPathFails node ./fixtures/fails.js > /dev/null || :
+  node ./fixtures/fails.js --color &> $snapshotPathFails || :
 done

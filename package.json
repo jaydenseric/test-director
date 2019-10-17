@@ -44,7 +44,7 @@
     "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
     "prepare:jsdoc": "jsdoc-md",
     "prepare:prettier": "prettier readme.md --write",
-    "update-snapshots": "./scripts/update-snapshots.sh",
+    "create-snapshots": "./scripts/create-snapshots.sh",
     "test": "npm run test:eslint && npm run test:prettier && npm run test:snapshots",
     "test:eslint": "eslint .",
     "test:prettier": "prettier '**/*.{json,yml,md}' -l",

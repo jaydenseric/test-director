@@ -17,18 +17,16 @@ snapshotTempPathFails="$snapshotTempPath/stdout-fails.txt"
 fixturePathPasses="./fixtures/passes.js"
 fixturePathFails="./fixtures/fails.js"
 
-echo "\nCreating Node.js v$nodeSemverMajor snapshots…"
+echo "\nCreating temporary Node.js v$nodeSemverMajor snapshots…"
 
 # Ensure the temporary snapshot directory exists.
 mkdir -p $snapshotTempPath
 
-# The `> /dev/null` silences output.
-
 echo "Creating $snapshotTempPathPasses"
-passesTestExitCode=$(script -q $snapshotTempPathPasses node $fixturePathPasses > /dev/null; echo $?)
+passesTestExitCode=$(node $fixturePathPasses --color &> $snapshotTempPathPasses; echo $?)
 
 echo "Creating $snapshotTempPathFails"
-failsTestExitCode=$(script -q $snapshotTempPathFails node $fixturePathFails > /dev/null; echo $?)
+failsTestExitCode=$(node $fixturePathFails --color &> $snapshotTempPathFails; echo $?)
 
 echo "\nChecking exit codes…"
 
@@ -44,11 +42,11 @@ then
   exitCode=1
 fi
 
-echo "\nDiffing snapshots…"
+echo "\nComparing snapshots…"
 
 git --no-pager diff --no-index $snapshotPath $snapshotTempPath
 
-echo "\nCleaning up…"
+echo "\nCleaning up temporary snapshots…"
 
 # Delete the temporary snapshot directory.
 rm -rf $snapshotTempPath
