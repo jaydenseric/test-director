@@ -88,7 +88,7 @@ Runs the tests one after another, in the order they were added.
 
 ##### Examples
 
-_Run tests, exiting the process if some fail._
+_Run tests._
 
 > ```js
 > testDirector.run()

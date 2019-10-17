@@ -69,7 +69,7 @@ exports.TestDirector = class TestDirector {
    * @name TestDirector#run
    * @param {boolean} [throwOnFailure=false] After tests run, throw an error if some failed.
    * @returns {Promise<void>} Resolves once tests have run.
-   * @example <caption>Run tests, exiting the process if some fail.</caption>
+   * @example <caption>Run tests.</caption>
    * ```js
    * testDirector.run()
    * ```
