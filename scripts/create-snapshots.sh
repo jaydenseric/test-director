@@ -15,18 +15,14 @@ do
   echo "\nCreating Node.js v$nodeSemverMajor snapshots…"
 
   snapshotPath="./snapshots/node-$nodeSemverMajor"
+  snapshotPathPasses="$snapshotPath/stdout-passes.txt"
+  snapshotPathFails="$snapshotPath/stdout-fails.txt"
 
   # Ensure the snapshot directory exists.
   mkdir -p $snapshotPath
 
-  # Install and use the latest patch version for the given Node.js version.
+  # Install and use the latest version for the given Node.js major version.
   nvm install $nodeSemverMajor
-
-  # The `script` command is used to snapshot output of the node scripts:
-  # https://stackoverflow.com/questions/27397865/how-to-write-stdout-to-file-with-colors#comment76253833_27399198
-
-  snapshotPathPasses="$snapshotPath/stdout-passes.txt"
-  snapshotPathFails="$snapshotPath/stdout-fails.txt"
 
   # `--color` forces the `chalk` npm package to display colors, as it normally
   # wouldn’t in this situation. `|| :` prevents an expected or possible non-zero
