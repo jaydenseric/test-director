@@ -1,3 +1,5 @@
+'use strict'
+
 const { TestDirector } = require('..')
 
 const testDirector1 = new TestDirector()

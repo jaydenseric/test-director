@@ -1,3 +1,5 @@
+'use strict'
+
 const { ok } = require('assert')
 const { TestDirector } = require('..')
 

@@ -23,22 +23,21 @@
     "node": ">=8.5"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "stack-utils": "^1.0.2"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-config-env": "^10.0.0",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-import-order-alphabetical": "^1.0.0",
-    "eslint-plugin-jsdoc": "^15.11.0",
+    "eslint": "^6.7.2",
+    "eslint-config-env": "^12.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsdoc": "^18.4.3",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^3.0.9",
+    "husky": "^3.1.0",
     "jsdoc-md": "^4.0.1",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2"
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
