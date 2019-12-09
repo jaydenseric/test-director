@@ -7,32 +7,32 @@ Test: [1mTest with sub tests.[22m
     
     [31mMessage.[39m
     
-    [31m[2mfixtures/fails.js:13:11[22m[39m
-    [31m[2mTestDirector.run (index.js:116:15)[22m[39m
-    [31m[2masync fixtures/fails.js:19:3[22m[39m
-    [31m[2masync TestDirector.run (index.js:116:9)[22m[39m
-    [31m[2m[22m[39m
+    [2m[31mfixtures/fails.js:13:11
+    TestDirector.run (index.js:116:15)
+    async fixtures/fails.js:19:3
+    async TestDirector.run (index.js:116:9)
+    [22m[39m
   
   Test: [1mFailing test with assertion error.[22m
     
-    [31mThe expression evaluated to a falsy value:[39m
-    [31m[39m
-    [31m  ok(false)[39m
-    [31m[39m
+    [31mThe expression evaluated to a falsy value:
     
-    [31m[2mok(false)[22m[39m
-    [31m[2m    fixtures/fails.js:16:5[22m[39m
-    [31m[2m    TestDirector.run (index.js:116:15)[22m[39m
-    [31m[2m    async fixtures/fails.js:19:3[22m[39m
-    [31m[2m    async TestDirector.run (index.js:116:9)[22m[39m
-    [31m[2m[22m[39m
+      ok(false)
+    [39m
+    
+    [2m[31mok(false)
+        fixtures/fails.js:16:5
+        TestDirector.run (index.js:116:15)
+        async fixtures/fails.js:19:3
+        async TestDirector.run (index.js:116:9)
+    [22m[39m
   
-  [31m[1m[31m1/3 tests passed.[39m[31m[22m[39m
+  [31m[1m[31m1/3 tests passed.[22m[39m[31m[39m
   
-  [31m[2mTestDirector.run (index.js:141:33)[22m[39m
-  [31m[2masync fixtures/fails.js:19:3[22m[39m
-  [31m[2masync TestDirector.run (index.js:116:9)[22m[39m
-  [31m[2m[22m[39m
+  [2m[31mTestDirector.run (index.js:141:33)
+  async fixtures/fails.js:19:3
+  async TestDirector.run (index.js:116:9)
+  [22m[39m
 
 Test: [1mPassing test.[22m
 
@@ -40,9 +40,9 @@ Test: [1mFailing test with standard error.[22m
   
   [31mMessage.[39m
   
-  [31m[2mfixtures/fails.js:24:9[22m[39m
-  [31m[2mTestDirector.run (index.js:116:15)[22m[39m
-  [31m[2m[22m[39m
+  [2m[31mfixtures/fails.js:24:9
+  TestDirector.run (index.js:116:15)
+  [22m[39m
 
-[1m[31m1/3 tests passed.[39m[22m
+[1m[31m1/3 tests passed.[22m[39m
 

@@ -1,6 +1,6 @@
 'use strict'
 
-const chalk = require('chalk')
+const kleur = require('kleur')
 const StackUtils = require('stack-utils')
 
 /**
@@ -110,14 +110,14 @@ exports.TestDirector = class TestDirector {
     })
 
     for (const [name, test] of this.tests) {
-      console.group(`\nTest: ${chalk.bold(name)}`)
+      console.group(`\nTest: ${kleur.bold(name)}`)
 
       try {
         await test()
         passCount++
       } catch (error) {
         console.error(
-          `\n${chalk.red(error.message)}\n\n${chalk.red.dim(
+          `\n${kleur.red(error.message)}\n\n${kleur.dim().red(
             // Strip Node.js internals from the error stack.
             stackUtils.clean(
               // Remove the inconsistent and confusing entry Node.js v12 puts
@@ -136,11 +136,11 @@ exports.TestDirector = class TestDirector {
     if (passCount < this.tests.size) {
       process.exitCode = 1
 
-      const message = chalk.bold.red(summary)
+      const message = kleur.bold().red(summary)
 
       if (throwOnFailure) throw new Error(message)
 
       console.info(`\n${message}\n`)
-    } else console.info(`\n${chalk.bold.green(summary)}\n`)
+    } else console.info(`\n${kleur.bold().green(summary)}\n`)
   }
 }
