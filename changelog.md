@@ -12,6 +12,7 @@
 
 - Updated dependencies.
 - Use strict mode for scripts.
+- Test Node.js v13 in CI GitHub Actions.
 - Corrected an example caption.
 
 ## 1.0.0
