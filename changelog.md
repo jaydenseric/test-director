@@ -16,6 +16,7 @@
 ### Patch
 
 - Updated dev dependencies.
+- Removed the now redundant [`eslint-plugin-import-order-alphabetical`](https://npm.im/eslint-plugin-import-order-alphabetical) dev dependency.
 - Stop using [`husky`](https://npm.im/husky) and [`lint-staged`](https://npm.im/lint-staged).
 - Use strict mode for scripts.
 - Test Node.js v13 in CI GitHub Actions.
