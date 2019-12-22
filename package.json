@@ -21,7 +21,7 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=8.10"
+    "node": ">=10"
   },
   "dependencies": {
     "kleur": "^3.0.3",

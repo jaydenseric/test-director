@@ -2,15 +2,20 @@
 
 ## Next
 
+### Major
+
+- Updated Node.js support from v8.10+ to v10+.
+
 ### Patch
 
 - Implemented better tests using JS, replacing the shell scripts.
+- Added a readme “Support” section.
 
 ## 2.0.0
 
 ### Major
 
-- Support Node.js v8.10+.
+- Updated Node.js support from v8.5+ to v8.10+.
 - Replaced the [`chalk`](https://npm.im/chalk) dependency with [`kleur`](https://npm.im/kleur), which has a much smaller install size and outputs cleaner code. Its environment color support detection may behave differently.
 
 ### Minor

@@ -14,6 +14,10 @@ To install from [npm](https://npmjs.com) run:
 npm install test-director --save-dev
 ```
 
+## Support
+
+- Node.js v10+
+
 ## API
 
 ### Table of contents
