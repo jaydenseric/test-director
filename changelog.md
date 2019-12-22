@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Ensured test snapshot comparison errors cause an error exit code.
+
 ## 2.0.0
 
 ### Major

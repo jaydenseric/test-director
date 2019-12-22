@@ -44,7 +44,7 @@ fi
 
 echo "\nComparing snapshots…"
 
-git --no-pager diff --no-index $snapshotPath $snapshotTempPath
+git --no-pager diff --no-index $snapshotPath $snapshotTempPath || exitCode=1
 
 echo "\nCleaning up temporary snapshots…"
 
