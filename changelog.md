@@ -4,7 +4,7 @@
 
 ### Patch
 
-- Ensured test snapshot comparison errors cause an error exit code.
+- Implemented better tests using JS, replacing the shell scripts.
 
 ## 2.0.0
 

@@ -42,11 +42,10 @@
     "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
     "prepare:jsdoc": "jsdoc-md",
     "prepare:prettier": "prettier readme.md --write",
-    "create-snapshots": "./scripts/create-snapshots.sh",
-    "test": "npm run test:eslint && npm run test:prettier && npm run test:snapshots",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:api",
     "test:eslint": "eslint .",
     "test:prettier": "prettier '**/*.{json,yml,md}' -l",
-    "test:snapshots": "./scripts/test-snapshots.sh",
+    "test:api": "node test",
     "prepublishOnly": "npm test"
   }
 }
