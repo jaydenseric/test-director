@@ -8,6 +8,7 @@
 
 ### Patch
 
+- Updated dev dependencies.
 - Implemented better tests using JS, replacing the shell scripts.
 - Added a readme “Support” section.
 
