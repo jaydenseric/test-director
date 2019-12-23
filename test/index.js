@@ -128,13 +128,13 @@ const tests = [
 
     assert.strictEqual(
       stdout.toString(),
-      '\nTest: \u001b[1ma\u001b[22m\n\nTest: \u001b[1mb\u001b[22m\n\n\u001b[1m\u001b[31m1/2 tests passed.\u001b[22m\u001b[39m\n\n'
+      '\nTest: \u001b[1ma\u001b[22m\n\nTest: \u001b[1mb\u001b[22m\n\nTest: \u001b[1mc\u001b[22m\n\nTest: \u001b[1md\u001b[22m\n\nTest: \u001b[1me\u001b[22m\n\nTest: \u001b[1mf\u001b[22m\n\nTest: \u001b[1mg\u001b[22m\n\n\u001b[1m\u001b[31m0/7 tests passed.\u001b[22m\u001b[39m\n\n'
     )
     assert.strictEqual(
       simulatePublishedTraces(stderr.toString()),
       NODE_VERSION_MAJOR < 12
-        ? '  \n  \u001b[31mMessage.\u001b[39m\n  \n  \u001b[2m\u001b[31mtests.add (test/fixtures/fails.js:7:9)\n  Object.<anonymous> (test/fixtures/fails.js:10:7)\n  \u001b[22m\u001b[39m\n'
-        : '  \n  \u001b[31mMessage.\u001b[39m\n  \n  \u001b[2m\u001b[31mtest/fixtures/fails.js:7:9\n  Object.<anonymous> (test/fixtures/fails.js:10:7)\n  \u001b[22m\u001b[39m\n'
+        ? "  \n  \u001b[31mMessage.\u001b[39m\n  \n  \u001b[2m\u001b[31mtests.add (test/fixtures/fails.js:8:9)\n  Object.<anonymous> (test/fixtures/fails.js:28:7)\u001b[22m\u001b[39m\n  \n  \u001b[31mInput A expected to strictly equal input B:\n  + expected - actual\n  \n  - 0\n  + 1\u001b[39m\n  \n  \u001b[2m\u001b[31mtests.add (test/fixtures/fails.js:11:10)\n  Object.<anonymous> (test/fixtures/fails.js:28:7)\u001b[22m\u001b[39m\n  \n  \u001b[31mMessage.\u001b[39m\n  \n  \u001b[2m\u001b[31mtests.add (test/fixtures/fails.js:14:10)\n  Object.<anonymous> (test/fixtures/fails.js:28:7)\u001b[22m\u001b[39m\n  \n  \u001b[31m{ message: 'Message.' }\u001b[39m\n  \n  \u001b[31m{}\u001b[39m\n  \n  \u001b[31m'Message.'\u001b[39m\n  \n  \u001b[31mnull\u001b[39m\n"
+        : "  \n  \u001b[31mMessage.\u001b[39m\n  \n  \u001b[2m\u001b[31mtest/fixtures/fails.js:8:9\n  Object.<anonymous> (test/fixtures/fails.js:28:7)\u001b[22m\u001b[39m\n  \n  \u001b[31mExpected values to be strictly equal:\n  \n  0 !== 1\u001b[39m\n  \n  \u001b[2m\u001b[31mtest/fixtures/fails.js:11:10\n  Object.<anonymous> (test/fixtures/fails.js:28:7)\u001b[22m\u001b[39m\n  \n  \u001b[31mMessage.\u001b[39m\n  \n  \u001b[2m\u001b[31mtest/fixtures/fails.js:14:10\n  Object.<anonymous> (test/fixtures/fails.js:28:7)\u001b[22m\u001b[39m\n  \n  \u001b[31m{ message: 'Message.' }\u001b[39m\n  \n  \u001b[31m{}\u001b[39m\n  \n  \u001b[31m'Message.'\u001b[39m\n  \n  \u001b[31mnull\u001b[39m\n"
     )
     assert.strictEqual(status, 1)
   },
@@ -155,8 +155,8 @@ const tests = [
     assert.strictEqual(
       simulatePublishedTraces(stderr.toString()),
       NODE_VERSION_MAJOR < 12
-        ? '    \n    \u001b[31mMessage.\u001b[39m\n    \n    \u001b[2m\u001b[31mtests.add (test/fixtures/nested.js:9:11)\n    tests.add (test/fixtures/nested.js:11:15)\n    Object.<anonymous> (test/fixtures/nested.js:13:7)\n    \u001b[22m\u001b[39m\n  \n  \u001b[31m\u001b[1m\u001b[31m0/1 tests passed.\u001b[22m\u001b[39m\u001b[31m\u001b[39m\n  \n  tests.add (test/fixtures/nested.js:11:15)\n  Object.<anonymous> (test/fixtures/nested.js:13:7)\n  \u001b[22m\u001b[39m\n'
-        : '    \n    \u001b[31mMessage.\u001b[39m\n    \n    \u001b[2m\u001b[31mtest/fixtures/nested.js:9:11\n    test/fixtures/nested.js:11:15\n    Object.<anonymous> (test/fixtures/nested.js:13:7)\n    \u001b[22m\u001b[39m\n  \n  \u001b[31m\u001b[1m\u001b[31m0/1 tests passed.\u001b[22m\u001b[39m\u001b[31m\u001b[39m\n  \n  test/fixtures/nested.js:11:15\n  Object.<anonymous> (test/fixtures/nested.js:13:7)\n  \u001b[22m\u001b[39m\n'
+        ? '    \n    \u001b[31mMessage.\u001b[39m\n    \n    \u001b[2m\u001b[31mtests.add (test/fixtures/nested.js:9:11)\n    tests.add (test/fixtures/nested.js:11:15)\n    Object.<anonymous> (test/fixtures/nested.js:13:7)\u001b[22m\u001b[39m\n  \n  \u001b[31m\u001b[1m\u001b[31m0/1 tests passed.\u001b[22m\u001b[39m\u001b[31m\u001b[39m\n  \n  tests.add (test/fixtures/nested.js:11:15)\n  Object.<anonymous> (test/fixtures/nested.js:13:7)\u001b[22m\u001b[39m\n'
+        : '    \n    \u001b[31mMessage.\u001b[39m\n    \n    \u001b[2m\u001b[31mtest/fixtures/nested.js:9:11\n    test/fixtures/nested.js:11:15\n    Object.<anonymous> (test/fixtures/nested.js:13:7)\u001b[22m\u001b[39m\n  \n  \u001b[31m\u001b[1m\u001b[31m0/1 tests passed.\u001b[22m\u001b[39m\u001b[31m\u001b[39m\n  \n  test/fixtures/nested.js:11:15\n  Object.<anonymous> (test/fixtures/nested.js:13:7)\u001b[22m\u001b[39m\n'
     )
     assert.strictEqual(status, 1)
   }
@@ -165,9 +165,7 @@ const tests = [
 for (const test of tests)
   try {
     test()
-  } catch (error) {
-    error.message && error.stack
-      ? console.error(error.message, error.stack)
-      : console.error(error)
+  } catch ({ stack }) {
+    console.error(stack)
     process.exitCode = 1
   }

@@ -10,11 +10,13 @@
 
 ### Minor
 
+- Support tests throwing unusual error types, such as primitives.
 - [`test-director`](https://npm.im/test-director) is now excluded from error traces.
 
 ### Patch
 
 - Updated dev dependencies.
+- Removed the extra newline that trails error stacks.
 - Implemented better tests using JS, replacing the shell scripts.
 - Added a readme “Support” section.
 

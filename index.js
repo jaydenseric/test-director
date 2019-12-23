@@ -1,5 +1,6 @@
 'use strict'
 
+const { inspect } = require('util')
 const kleur = require('kleur')
 const StackUtils = require('stack-utils')
 
@@ -116,11 +117,37 @@ exports.TestDirector = class TestDirector {
         await test()
         passCount++
       } catch (error) {
-        console.error(
-          `\n${kleur.red(error.message)}\n\n${kleur
-            .dim()
-            .red(stackUtils.clean(error.stack))}`
-        )
+        if (error instanceof Error) {
+          console.error(
+            `\n${kleur.red(
+              error.code === 'ERR_ASSERTION' &&
+                // A manually specified message should be displayed verbatim.
+                error.generatedMessage
+                ? // Remove the trailing newline that all generated assertion
+                  // error messages have.
+                  error.message.trim()
+                : error.message
+            )}`
+          )
+          console.error(
+            `\n${kleur.dim().red(
+              // Remove the leading message, remove lines about Node.js and
+              // test-director internals, and simplify paths relative to the CWD.
+              stackUtils
+                // This always leaves a trailing newline.
+                .clean(
+                  error.code === 'ERR_ASSERTION'
+                    ? // Remove the leading message as stack-utils doesn’t do
+                      // this for assertion errors. This can leave leading
+                      // newlines.
+                      error.stack.replace(/^(?! {4}at ).*$/gm, '')
+                    : error.stack
+                )
+                // Remove leading or trailing newlines.
+                .trim()
+            )}`
+          )
+        } else console.error(`\n${kleur.red(inspect(error))}`)
       } finally {
         console.groupEnd()
       }
