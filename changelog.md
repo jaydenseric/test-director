@@ -5,7 +5,12 @@
 ### Major
 
 - Updated Node.js support from v8.10+ to v10+.
+- Updated the [`stack-utils`](https://npm.im/stack-utils) dependency to v2.
 - Use [`coverage-node`](https://npm.im/coverage-node) for test code coverage.
+
+### Minor
+
+- [`test-director`](https://npm.im/test-director) is now excluded from error traces.
 
 ### Patch
 

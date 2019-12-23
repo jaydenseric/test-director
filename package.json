@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "kleur": "^3.0.3",
-    "stack-utils": "^1.0.2"
+    "stack-utils": "^2.0.1"
   },
   "devDependencies": {
     "coverage-node": "^2.0.0",

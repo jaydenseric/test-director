@@ -106,7 +106,7 @@ exports.TestDirector = class TestDirector {
     let passCount = 0
 
     const stackUtils = new StackUtils({
-      internals: StackUtils.nodeInternals()
+      ignoredPackages: ['test-director']
     })
 
     for (const [name, test] of this.tests) {
@@ -117,14 +117,9 @@ exports.TestDirector = class TestDirector {
         passCount++
       } catch (error) {
         console.error(
-          `\n${kleur.red(error.message)}\n\n${kleur.dim().red(
-            // Strip Node.js internals from the error stack.
-            stackUtils.clean(
-              // Remove the inconsistent and confusing entry Node.js v12 puts
-              // at the bottom of the stack.
-              error.stack.replace(/^ +at internal\/.+:\d+:\d+.+$/gm, '')
-            )
-          )}`
+          `\n${kleur.red(error.message)}\n\n${kleur
+            .dim()
+            .red(stackUtils.clean(error.stack))}`
         )
       } finally {
         console.groupEnd()
