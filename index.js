@@ -130,7 +130,7 @@ exports.TestDirector = class TestDirector {
             )}`
           )
           console.error(
-            `\n${kleur.dim().red(
+            `\n${kleur.red().dim(
               // Remove the leading message, remove lines about Node.js and
               // test-director internals, and simplify paths relative to the CWD.
               stackUtils
@@ -158,11 +158,11 @@ exports.TestDirector = class TestDirector {
     if (passCount < this.tests.size) {
       process.exitCode = 1
 
-      const message = kleur.bold().red(summary)
+      const message = kleur.red().bold(summary)
 
       if (throwOnFailure) throw new Error(message)
 
       console.info(`\n${message}\n`)
-    } else console.info(`\n${kleur.bold().green(summary)}\n`)
+    } else console.info(`\n${kleur.green().bold(summary)}\n`)
   }
 }
