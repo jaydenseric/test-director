@@ -1,6 +1,6 @@
 # test-director changelog
 
-## Next
+## 3.0.0
 
 ### Major
 
