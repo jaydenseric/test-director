@@ -101,6 +101,23 @@ const tests = [
   },
 
   () => {
+    console.info('Test: Awaits tests in sequence.')
+
+    const { stdout, stderr, status, error } = spawnSync('node', [
+      path.join(FIXTURES_PATH, 'awaits')
+    ])
+
+    if (error) throw error
+
+    assert.strictEqual(
+      stdout.toString(),
+      '\nTest: \u001b[1ma\u001b[22m\n  Message A.\n\nTest: \u001b[1mb\u001b[22m\n  Message B.\n\n\u001b[1m\u001b[32m2/2 tests passed.\u001b[22m\u001b[39m\n\n'
+    )
+    assert.strictEqual(stderr.toString(), '')
+    assert.strictEqual(status, 0)
+  },
+
+  () => {
     console.info('Test: Test fails.')
 
     const { stdout, stderr, status, error } = spawnSync('node', [
@@ -142,23 +159,6 @@ const tests = [
         : '    \n    \u001b[31mMessage.\u001b[39m\n    \n    \u001b[2m\u001b[31mtest/fixtures/nested.js:9:11\n    test/fixtures/nested.js:11:15\n    Object.<anonymous> (test/fixtures/nested.js:13:7)\n    \u001b[22m\u001b[39m\n  \n  \u001b[31m\u001b[1m\u001b[31m0/1 tests passed.\u001b[22m\u001b[39m\u001b[31m\u001b[39m\n  \n  test/fixtures/nested.js:11:15\n  Object.<anonymous> (test/fixtures/nested.js:13:7)\n  \u001b[22m\u001b[39m\n'
     )
     assert.strictEqual(status, 1)
-  },
-
-  () => {
-    console.info('Test: Awaits tests in sequence.')
-
-    const { stdout, stderr, status, error } = spawnSync('node', [
-      path.join(FIXTURES_PATH, 'awaits')
-    ])
-
-    if (error) throw error
-
-    assert.strictEqual(
-      stdout.toString(),
-      '\nTest: \u001b[1ma\u001b[22m\n  Message A.\n\nTest: \u001b[1mb\u001b[22m\n  Message B.\n\n\u001b[1m\u001b[32m2/2 tests passed.\u001b[22m\u001b[39m\n\n'
-    )
-    assert.strictEqual(stderr.toString(), '')
-    assert.strictEqual(status, 0)
   }
 ]
 
