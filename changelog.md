@@ -19,6 +19,7 @@
 - Changed the order of console color codes to color, then modifier.
 - Removed the extra newline that trails error stacks.
 - Implemented better tests using JS, replacing the shell scripts.
+- Updated code examples.
 - Added a readme “Support” section.
 
 ## 2.0.0

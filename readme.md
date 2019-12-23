@@ -38,7 +38,7 @@ _Import and construct a new test director._
 > ```js
 > const { TestDirector } = require('test-director')
 >
-> const testDirector = new TestDirector()
+> const tests = new TestDirector()
 > ```
 
 #### TestDirector instance method add
@@ -58,9 +58,9 @@ _A sync test._
 > const { equal } = require('assert')
 > const { TestDirector } = require('test-director')
 >
-> const testDirector = new TestDirector()
+> const tests = new TestDirector()
 >
-> testDirector.add('JavaScript addition.', () => {
+> tests.add('JavaScript addition.', () => {
 >   equal(1 + 1, 2)
 > })
 > ```
@@ -72,9 +72,9 @@ _An async test._
 > const fetch = require('node-fetch')
 > const { TestDirector } = require('test-director')
 >
-> const testDirector = new TestDirector()
+> const tests = new TestDirector()
 >
-> testDirector.add('GitHub is up.', async () => {
+> tests.add('GitHub is up.', async () => {
 >   const { ok } = await fetch('https://github.com')
 >   ok(ok)
 > })
@@ -92,38 +92,32 @@ Runs the tests one after another, in the order they were added.
 
 ##### Examples
 
-_Run tests._
-
-> ```js
-> testDirector.run()
-> ```
-
 _Run nested tests._
 
 > ```js
 > const { TestDirector } = require('test-director')
 >
-> const testDirector1 = new TestDirector()
+> const tests = new TestDirector()
 >
-> testDirector1.add('Test A.', async () => {
->   const testDirector2 = new TestDirector()
+> tests.add('Test A.', async () => {
+>   const tests = new TestDirector()
 >
->   testDirector2.add('Test B.', () => {
+>   tests.add('Test B.', () => {
 >     // …
 >   })
 >
->   testDirector2.add('Test C.', () => {
+>   tests.add('Test C.', () => {
 >     // …
 >   })
 >
->   await testDirector2.run(true)
+>   await tests.run(true)
 > })
 >
-> testDirector1.add('Test D.', () => {
+> tests.add('Test D.', () => {
 >   // …
 > })
 >
-> testDirector1.run()
+> tests.run()
 > ```
 
 #### TestDirector instance property tests
