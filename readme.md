@@ -63,6 +63,8 @@ _A sync test._
 > tests.add('JavaScript addition.', () => {
 >   equal(1 + 1, 2)
 > })
+>
+> tests.run()
 > ```
 
 _An async test._
@@ -78,6 +80,8 @@ _An async test._
 >   const { ok } = await fetch('https://github.com')
 >   ok(ok)
 > })
+>
+> tests.run()
 > ```
 
 #### TestDirector instance method run

@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Improved code examples.
+
 ## 3.0.0
 
 ### Major

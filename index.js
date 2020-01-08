@@ -42,6 +42,8 @@ exports.TestDirector = class TestDirector {
    * tests.add('JavaScript addition.', () => {
    *   equal(1 + 1, 2)
    * })
+   *
+   * tests.run()
    * ```
    * @example <caption>An async test.</caption>
    * ```js
@@ -55,6 +57,8 @@ exports.TestDirector = class TestDirector {
    *   const { ok } = await fetch('https://github.com')
    *   ok(ok)
    * })
+   *
+   * tests.run()
    * ```
    */
   add(name, test) {
