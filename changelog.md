@@ -4,6 +4,7 @@
 
 ### Patch
 
+- Updated dev dependencies.
 - Improved code examples.
 
 ## 3.0.0
