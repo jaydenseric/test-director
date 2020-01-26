@@ -6,6 +6,7 @@
 
 - Updated dev dependencies.
 - Added a new [`hard-rejection`](https://npm.im/hard-rejection) dev dependency to ensure unhandled rejections in tests exit the process with an error.
+- Don’t attempt to display an error stack if it’s missing, empty, or the same as the error message.
 - Improved code examples.
 
 ## 3.0.0

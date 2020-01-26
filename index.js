@@ -129,24 +129,27 @@ exports.TestDirector = class TestDirector {
                 : error.message
             )}`
           )
-          console.error(
-            `\n${kleur.red().dim(
-              // Remove the leading message, remove lines about Node.js and
-              // test-director internals, and simplify paths relative to the CWD.
-              stackUtils
-                // This always leaves a trailing newline.
-                .clean(
-                  error.code === 'ERR_ASSERTION'
-                    ? // Remove the leading message as stack-utils doesn’t do
-                      // this for assertion errors. This can leave leading
-                      // newlines.
-                      error.stack.replace(/^(?! {4}at ).*$/gm, '')
-                    : error.stack
-                )
-                // Remove leading or trailing newlines.
-                .trim()
-            )}`
-          )
+
+          if (error.stack) {
+            // Remove the leading message, remove lines about Node.js and
+            // test-director internals, and simplify paths relative to the CWD.
+            const cleanStack = stackUtils
+              // This always leaves a trailing newline.
+              .clean(
+                error.code === 'ERR_ASSERTION'
+                  ? // Remove the leading message as stack-utils doesn’t do
+                    // this for assertion errors. This can leave leading
+                    // newlines.
+                    error.stack.replace(/^(?! {4}at ).*$/gm, '')
+                  : error.stack
+              )
+              // Remove leading or trailing newlines.
+              .trim()
+
+            // Sometimes nothing remains of the stack after cleaning, e.g. for
+            // filesystem errors that have an identical error message and stack.
+            if (cleanStack) console.error(`\n${kleur.red().dim(cleanStack)}`)
+          }
         } else console.error(`\n${kleur.red(inspect(error))}`)
       } finally {
         console.groupEnd()

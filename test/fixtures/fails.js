@@ -8,21 +8,34 @@ tests.add('a', () => {
   throw new Error('Message.')
 })
 tests.add('b', () => {
-  assert.strictEqual(0, 1)
+  // Some errors have a stack the same as the message.
+  const message = 'Message.'
+  const error = new Error(message)
+  error.stack = message
+  throw error
 })
 tests.add('c', () => {
-  assert.strictEqual(0, 1, 'Message.')
+  // Some errors don’t have a stack.
+  const error = new Error('Message.')
+  delete error.stack
+  throw error
 })
 tests.add('d', () => {
-  throw { message: 'Message.' }
+  assert.strictEqual(0, 1)
 })
 tests.add('e', () => {
-  throw {}
+  assert.strictEqual(0, 1, 'Message.')
 })
 tests.add('f', () => {
-  throw 'Message.'
+  throw { message: 'Message.' }
 })
 tests.add('g', () => {
+  throw {}
+})
+tests.add('h', () => {
+  throw 'Message.'
+})
+tests.add('i', () => {
   throw null
 })
 tests.run()
