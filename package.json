@@ -1,6 +1,6 @@
 {
   "name": "test-director",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "An ultra lightweight unit test director for Node.js.",
   "license": "MIT",
   "author": {
