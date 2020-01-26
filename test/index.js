@@ -1,15 +1,5 @@
 'use strict'
 
-process
-  .on('uncaughtException', error => {
-    console.error('Uncaught exception:', error)
-    process.exitCode = 1
-  })
-  .on('unhandledRejection', error => {
-    console.error('Unhandled rejection:', error)
-    process.exitCode = 1
-  })
-
 const assert = require('assert')
 const { spawnSync } = require('child_process')
 const path = require('path')
