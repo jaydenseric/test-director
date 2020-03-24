@@ -6,6 +6,7 @@
 
 - Updated dependencies.
 - Lint fixes for [`prettier`](https://npm.im/prettier) v2.
+- Ensure GitHub Actions run on pull request.
 
 ## 3.0.1
 
