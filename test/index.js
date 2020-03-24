@@ -60,7 +60,7 @@ const tests = [
     console.info('Test: Test passes.')
 
     const { stdout, stderr, status, error } = spawnSync('node', [
-      path.join(FIXTURES_PATH, 'passes')
+      path.join(FIXTURES_PATH, 'passes'),
     ])
 
     if (error) throw error
@@ -77,7 +77,7 @@ const tests = [
     console.info('Test: Test with console output.')
 
     const { stdout, stderr, status, error } = spawnSync('node', [
-      path.join(FIXTURES_PATH, 'output')
+      path.join(FIXTURES_PATH, 'output'),
     ])
 
     if (error) throw error
@@ -94,7 +94,7 @@ const tests = [
     console.info('Test: Awaits tests in sequence.')
 
     const { stdout, stderr, status, error } = spawnSync('node', [
-      path.join(FIXTURES_PATH, 'awaits')
+      path.join(FIXTURES_PATH, 'awaits'),
     ])
 
     if (error) throw error
@@ -111,7 +111,7 @@ const tests = [
     console.info('Test: Test fails.')
 
     const { stdout, stderr, status, error } = spawnSync('node', [
-      path.join(FIXTURES_PATH, 'fails')
+      path.join(FIXTURES_PATH, 'fails'),
     ])
 
     if (error) throw error
@@ -133,7 +133,7 @@ const tests = [
     console.info('Test: Nested tests.')
 
     const { stdout, stderr, status, error } = spawnSync('node', [
-      path.join(FIXTURES_PATH, 'nested')
+      path.join(FIXTURES_PATH, 'nested'),
     ])
 
     if (error) throw error
@@ -149,7 +149,7 @@ const tests = [
         : '    \n    \u001b[31mMessage.\u001b[39m\n    \n    \u001b[31m\u001b[2mtest/fixtures/nested.js:9:11\n    test/fixtures/nested.js:11:15\n    Object.<anonymous> (test/fixtures/nested.js:13:7)\u001b[39m\u001b[22m\n  \n  \u001b[31m\u001b[31m\u001b[1m0/1 tests passed.\u001b[39m\u001b[31m\u001b[22m\u001b[39m\n  \n  test/fixtures/nested.js:11:15\n  Object.<anonymous> (test/fixtures/nested.js:13:7)\u001b[39m\u001b[22m\n'
     )
     assert.strictEqual(status, 1)
-  }
+  },
 ]
 
 for (const test of tests)

@@ -1,5 +1,12 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Updated dependencies.
+- Lint fixes for [`prettier`](https://npm.im/prettier) v2.
+
 ## 3.0.1
 
 ### Patch

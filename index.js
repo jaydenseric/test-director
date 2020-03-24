@@ -107,7 +107,7 @@ exports.TestDirector = class TestDirector {
     let passCount = 0
 
     const stackUtils = new StackUtils({
-      ignoredPackages: ['test-director']
+      ignoredPackages: ['test-director'],
     })
 
     for (const [name, test] of this.tests) {
