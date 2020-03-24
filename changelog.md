@@ -8,6 +8,7 @@
 - Lint fixes for [`prettier`](https://npm.im/prettier) v2.
 - Ensure GitHub Actions run on pull request.
 - Moved the `simulatePublishedTraces` test helper into its own file.
+- Destructure `assert` imports in tests.
 - Tidied the position of a JSDoc comment.
 
 ## 3.0.1

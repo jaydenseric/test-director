@@ -1,6 +1,6 @@
 'use strict'
 
-const assert = require('assert')
+const { strictEqual } = require('assert')
 const { TestDirector } = require('../../')
 
 const tests = new TestDirector()
@@ -21,10 +21,10 @@ tests.add('c', () => {
   throw error
 })
 tests.add('d', () => {
-  assert.strictEqual(0, 1)
+  strictEqual(0, 1)
 })
 tests.add('e', () => {
-  assert.strictEqual(0, 1, 'Message.')
+  strictEqual(0, 1, 'Message.')
 })
 tests.add('f', () => {
   throw { message: 'Message.' }
