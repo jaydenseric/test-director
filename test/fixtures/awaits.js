@@ -1,7 +1,7 @@
 'use strict'
 
-const { TestDirector } = require('../../')
-const sleep = require('../sleep')
+const TestDirector = require('../../lib/TestDirector.js')
+const sleep = require('../sleep.js')
 
 const tests = new TestDirector()
 tests.add('a', async () => {

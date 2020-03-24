@@ -3,8 +3,8 @@
 const { throws, strictEqual } = require('assert')
 const { spawnSync } = require('child_process')
 const path = require('path')
-const simulatePublishedTraces = require('./simulatePublishedTraces')
-const { TestDirector } = require('..')
+const TestDirector = require('../lib/TestDirector.js')
+const simulatePublishedTraces = require('./simulatePublishedTraces.js')
 
 const FIXTURES_PATH = path.join(__dirname, 'fixtures')
 const NODE_VERSION_MAJOR = parseInt(process.versions.node.split('.')[0])

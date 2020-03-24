@@ -2,13 +2,21 @@
 
 ## Next
 
+### Major
+
+- Added a [package `exports` field](https://nodejs.org/api/esm.html#esm_package_exports) to support native ESM in Node.js.
+- Added package `sideEffects` and `module` fields for bundlers such as webpack.
+- Published files have been reorganized, so undocumented deep imports may no longer work.
+
 ### Patch
 
 - Updated dependencies.
 - Lint fixes for [`prettier`](https://npm.im/prettier) v2.
+- Added `esm` and `mjs` to the package `tags` field.
 - Ensure GitHub Actions run on pull request.
 - Moved the `simulatePublishedTraces` test helper into its own file.
 - Destructure `assert` imports in tests.
+- Use file extensions in require paths.
 - Tidied the position of a JSDoc comment.
 
 ## 3.0.1

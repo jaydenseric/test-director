@@ -19,5 +19,5 @@
  * @ignore
  */
 module.exports = function simulatePublishedTraces(output) {
-  return output.replace(/^.*\(index\.js:.*$(?:\r\n?|\n)/gm, '')
+  return output.replace(/^.*\(lib\/TestDirector\.js:.*$(?:\r\n?|\n)/gm, '')
 }

@@ -14,12 +14,20 @@
   "funding": "https://github.com/sponsors/jaydenseric",
   "keywords": [
     "test",
-    "director"
+    "director",
+    "esm",
+    "mjs"
   ],
   "files": [
-    "index.js"
+    "lib"
   ],
-  "main": "index.js",
+  "sideEffects": false,
+  "module": "lib/index.mjs",
+  "main": "lib",
+  "exports": {
+    "import": "./lib/index.mjs",
+    "require": "./lib/index.js"
+  },
   "engines": {
     "node": ">=10"
   },

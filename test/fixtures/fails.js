@@ -1,7 +1,7 @@
 'use strict'
 
 const { strictEqual } = require('assert')
-const { TestDirector } = require('../../')
+const TestDirector = require('../../lib/TestDirector.js')
 
 const tests = new TestDirector()
 tests.add('a', () => {
