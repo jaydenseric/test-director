@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
-const TestDirector = require('../../lib/TestDirector.js')
+const TestDirector = require('../../lib/TestDirector.js');
 
-const tests = new TestDirector()
+const tests = new TestDirector();
 tests.add('a', () => {
-  console.info('Message.')
-})
-tests.run()
+  console.info('Message.');
+});
+tests.run();

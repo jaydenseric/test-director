@@ -1,14 +1,14 @@
-'use strict'
+'use strict';
 
-const TestDirector = require('../../lib/TestDirector.js')
-const sleep = require('../sleep.js')
+const TestDirector = require('../../lib/TestDirector.js');
+const sleep = require('../sleep.js');
 
-const tests = new TestDirector()
+const tests = new TestDirector();
 tests.add('a', async () => {
-  await sleep(50)
-  console.info('Message A.')
-})
+  await sleep(50);
+  console.info('Message A.');
+});
 tests.add('b', () => {
-  console.info('Message B.')
-})
-tests.run()
+  console.info('Message B.');
+});
+tests.run();

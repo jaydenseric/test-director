@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /**
  * Sleeps the process for a specified duration.
@@ -9,5 +9,5 @@
  * @ignore
  */
 module.exports = function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms))
-}
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /**
  * Manually removes error trace lines from console output that would normally be
@@ -19,5 +19,5 @@
  * @ignore
  */
 module.exports = function simulatePublishedTraces(output) {
-  return output.replace(/^.*\(lib\/TestDirector\.js:.*$(?:\r\n?|\n)/gm, '')
-}
+  return output.replace(/^.*\(lib\/TestDirector\.js:.*$(?:\r\n?|\n)/gm, '');
+};

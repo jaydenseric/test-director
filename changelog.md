@@ -10,6 +10,8 @@
 - Also run GitHub Actions with Node.js v14.
 - Use [`snapshot-assertion`](https://npm.im/snapshot-assertion) for snapshot tests.
 - Mention [`snapshot-assertion`](https://npm.im/snapshot-assertion) in the readme.
+- Improved the package `prepare:prettier` and `test:prettier` scripts.
+- Configured Prettier option `semi` to the default, `true`.
 
 ## 4.0.0
 

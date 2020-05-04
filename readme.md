@@ -36,9 +36,9 @@ An ultra lightweight unit test director for Node.js.
 _Import and construct a new test director._
 
 > ```js
-> const { TestDirector } = require('test-director')
+> const { TestDirector } = require('test-director');
 >
-> const tests = new TestDirector()
+> const tests = new TestDirector();
 > ```
 
 #### TestDirector instance method add
@@ -55,33 +55,33 @@ Adds a test.
 _A sync test._
 
 > ```js
-> const { equal } = require('assert')
-> const { TestDirector } = require('test-director')
+> const { equal } = require('assert');
+> const { TestDirector } = require('test-director');
 >
-> const tests = new TestDirector()
+> const tests = new TestDirector();
 >
 > tests.add('JavaScript addition.', () => {
->   equal(1 + 1, 2)
-> })
+>   equal(1 + 1, 2);
+> });
 >
-> tests.run()
+> tests.run();
 > ```
 
 _An async test._
 
 > ```js
-> const { ok } = require('assert')
-> const fetch = require('node-fetch')
-> const { TestDirector } = require('test-director')
+> const { ok } = require('assert');
+> const fetch = require('node-fetch');
+> const { TestDirector } = require('test-director');
 >
-> const tests = new TestDirector()
+> const tests = new TestDirector();
 >
 > tests.add('GitHub is up.', async () => {
->   const { ok } = await fetch('https://github.com')
->   ok(ok)
-> })
+>   const { ok } = await fetch('https://github.com');
+>   ok(ok);
+> });
 >
-> tests.run()
+> tests.run();
 > ```
 
 #### TestDirector instance method run
@@ -99,29 +99,29 @@ Runs the tests one after another, in the order they were added.
 _Run nested tests._
 
 > ```js
-> const { TestDirector } = require('test-director')
+> const { TestDirector } = require('test-director');
 >
-> const tests = new TestDirector()
+> const tests = new TestDirector();
 >
 > tests.add('Test A.', async () => {
->   const tests = new TestDirector()
+>   const tests = new TestDirector();
 >
 >   tests.add('Test B.', () => {
 >     // …
->   })
+>   });
 >
 >   tests.add('Test C.', () => {
 >     // …
->   })
+>   });
 >
->   await tests.run(true)
-> })
+>   await tests.run(true);
+> });
 >
 > tests.add('Test D.', () => {
 >   // …
-> })
+> });
 >
-> tests.run()
+> tests.run();
 > ```
 
 #### TestDirector instance property tests
