@@ -8,6 +8,7 @@
 - Updated Node.js support to `10 - 12 || >= 13.7` to reflect the package `exports` related breaking changes.
 - Updated the package `exports` field to allow requiring `package.json` and specific deep imports.
 - Also run GitHub Actions with Node.js v14.
+- Use [`snapshot-assertion`](https://npm.im/snapshot-assertion) for snapshot tests.
 
 ## 4.0.0
 

@@ -1,0 +1,6 @@
+
+Test: [1ma[22m
+  Message.
+
+[32m[1m1/1 tests passed.[39m[22m
+
