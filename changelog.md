@@ -9,6 +9,7 @@
 - Updated the package `exports` field to allow requiring `package.json` and specific deep imports.
 - Also run GitHub Actions with Node.js v14.
 - Use [`snapshot-assertion`](https://npm.im/snapshot-assertion) for snapshot tests.
+- Mention [`snapshot-assertion`](https://npm.im/snapshot-assertion) in the readme.
 
 ## 4.0.0
 
