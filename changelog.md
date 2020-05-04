@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Updated dependencies.
+
 ## 4.0.0
 
 ### Major
