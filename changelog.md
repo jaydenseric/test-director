@@ -5,6 +5,7 @@
 ### Patch
 
 - Updated dependencies.
+- Also run GitHub Actions with Node.js v14.
 
 ## 4.0.0
 
