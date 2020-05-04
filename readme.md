@@ -16,7 +16,7 @@ npm install test-director --save-dev
 
 ## Support
 
-- Node.js v10+
+- Node.js `10 - 12 || >= 13.7`
 
 ## API
 
