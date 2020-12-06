@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Use destructuring for `require` of the Node.js `path` API in tests.
+
 ## 4.0.1
 
 ### Patch
