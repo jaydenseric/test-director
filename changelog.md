@@ -20,6 +20,7 @@
 - Use the `FORCE_COLOR` environment variable in tests to ensure output is colorized.
 - Use the `.ans` file extension for snapshot text files containing ANSI colorization.
 - Removed `npm-debug.log` from the `.gitignore` file as npm [v4.2.0](https://github.com/npm/npm/releases/tag/v4.2.0)+ doesn’t create it in the current working directory.
+- When tests fail and the `throwOnFailure` option is used, don’t set the process exit code to `1`.
 
 ## 4.0.1
 

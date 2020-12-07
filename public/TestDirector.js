@@ -173,13 +173,13 @@ module.exports = class TestDirector {
     const summary = `${passCount}/${this.tests.size} tests passed.`;
 
     if (passCount < this.tests.size) {
-      process.exitCode = 1;
-
       const message = kleur.red().bold(summary);
 
       if (throwOnFailure) throw new Error(message);
 
       console.error(`\n${message}\n`);
+
+      process.exitCode = 1;
     } else console.info(`\n${kleur.green().bold(summary)}\n`);
   }
 };
