@@ -4,7 +4,7 @@ const { throws, strictEqual } = require('assert');
 const { spawnSync } = require('child_process');
 const { join } = require('path');
 const snapshot = require('snapshot-assertion');
-const TestDirector = require('../lib/TestDirector.js');
+const TestDirector = require('../public/TestDirector.js');
 const simulatePublishedTraces = require('./simulatePublishedTraces.js');
 
 const FIXTURES_PATH = join(__dirname, 'fixtures');

@@ -19,20 +19,16 @@
     "mjs"
   ],
   "files": [
-    "lib"
+    "public"
   ],
   "sideEffects": false,
-  "main": "lib",
+  "main": "public",
   "exports": {
     ".": {
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.js"
+      "import": "./public/index.mjs",
+      "require": "./public/index.js"
     },
-    "./lib": {
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.js"
-    },
-    "./lib/": "./lib/",
+    "./public/": "./public/",
     "./package": "./package.json",
     "./package.json": "./package.json"
   },

@@ -33,11 +33,29 @@ An ultra lightweight unit test director for Node.js.
 
 #### Examples
 
-_Import and construct a new test director._
+_Ways to `import`._
+
+> ```js
+> import { TestDirector } from 'test-director';
+> ```
+>
+> ```js
+> import TestDirector from 'test-director/public/TestDirector.js';
+> ```
+
+_Ways to `require`._
 
 > ```js
 > const { TestDirector } = require('test-director');
+> ```
 >
+> ```js
+> const TestDirector = require('test-director/public/TestDirector');
+> ```
+
+_How to construct a new test director._
+
+> ```js
 > const tests = new TestDirector();
 > ```
 

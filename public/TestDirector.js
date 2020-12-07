@@ -8,10 +8,24 @@ const StackUtils = require('stack-utils');
  * An ultra lightweight unit test director for Node.js.
  * @kind class
  * @name TestDirector
- * @example <caption>Import and construct a new test director.</caption>
+ * @example <caption>Ways to `import`.</caption>
+ * ```js
+ * import { TestDirector } from 'test-director';
+ * ```
+ *
+ * ```js
+ * import TestDirector from 'test-director/public/TestDirector.js';
+ * ```
+ * @example <caption>Ways to `require`.</caption>
  * ```js
  * const { TestDirector } = require('test-director');
+ * ```
  *
+ * ```js
+ * const TestDirector = require('test-director/public/TestDirector');
+ * ```
+ * @example <caption>How to construct a new test director.</caption>
+ * ```js
  * const tests = new TestDirector();
  * ```
  */

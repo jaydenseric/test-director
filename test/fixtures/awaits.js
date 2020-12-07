@@ -1,6 +1,6 @@
 'use strict';
 
-const TestDirector = require('../../lib/TestDirector.js');
+const TestDirector = require('../../public/TestDirector.js');
 const sleep = require('../sleep.js');
 
 const tests = new TestDirector();
