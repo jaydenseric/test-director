@@ -16,7 +16,7 @@ npm install test-director --save-dev
 
 ## Support
 
-- Node.js `10 - 12 || >= 13.7`
+- Node.js `^10.17.0 || ^12.0.0 || >= 13.7.0`
 
 ## API
 
@@ -92,7 +92,7 @@ Runs the tests one after another, in the order they were added.
 | :-- | :-- | :-- |
 | `throwOnFailure` | boolean? = `false` | After tests run, throw an error if some failed. |
 
-**Returns:** Promise&lt;void> — Resolves once tests have run.
+**Returns:** Promise\<void> — Resolves once tests have run.
 
 ##### Examples
 
@@ -128,4 +128,4 @@ _Run nested tests._
 
 A map of test functions that have been added, keyed by their test names.
 
-**Type:** Map&lt;string, Function>
+**Type:** Map\<string, Function>

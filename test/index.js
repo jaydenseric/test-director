@@ -40,9 +40,16 @@ const tests = [
   async () => {
     console.info('Test: Test passes.');
 
-    const { stdout, stderr, status, error } = spawnSync('node', [
-      join(FIXTURES_PATH, 'passes'),
-    ]);
+    const { stdout, stderr, status, error } = spawnSync(
+      'node',
+      [join(FIXTURES_PATH, 'passes')],
+      {
+        env: {
+          ...process.env,
+          FORCE_COLOR: 1,
+        },
+      }
+    );
 
     if (error) throw error;
 
@@ -57,9 +64,16 @@ const tests = [
   async () => {
     console.info('Test: Test with console output.');
 
-    const { stdout, stderr, status, error } = spawnSync('node', [
-      join(FIXTURES_PATH, 'output'),
-    ]);
+    const { stdout, stderr, status, error } = spawnSync(
+      'node',
+      [join(FIXTURES_PATH, 'output')],
+      {
+        env: {
+          ...process.env,
+          FORCE_COLOR: 1,
+        },
+      }
+    );
 
     if (error) throw error;
 
@@ -74,9 +88,16 @@ const tests = [
   async () => {
     console.info('Test: Awaits tests in sequence.');
 
-    const { stdout, stderr, status, error } = spawnSync('node', [
-      join(FIXTURES_PATH, 'awaits'),
-    ]);
+    const { stdout, stderr, status, error } = spawnSync(
+      'node',
+      [join(FIXTURES_PATH, 'awaits')],
+      {
+        env: {
+          ...process.env,
+          FORCE_COLOR: 1,
+        },
+      }
+    );
 
     if (error) throw error;
 
@@ -91,9 +112,16 @@ const tests = [
   async () => {
     console.info('Test: Test fails.');
 
-    const { stdout, stderr, status, error } = spawnSync('node', [
-      join(FIXTURES_PATH, 'fails'),
-    ]);
+    const { stdout, stderr, status, error } = spawnSync(
+      'node',
+      [join(FIXTURES_PATH, 'fails')],
+      {
+        env: {
+          ...process.env,
+          FORCE_COLOR: 1,
+        },
+      }
+    );
 
     if (error) throw error;
 
@@ -111,9 +139,16 @@ const tests = [
   async () => {
     console.info('Test: Nested tests.');
 
-    const { stdout, stderr, status, error } = spawnSync('node', [
-      join(FIXTURES_PATH, 'nested'),
-    ]);
+    const { stdout, stderr, status, error } = spawnSync(
+      'node',
+      [join(FIXTURES_PATH, 'nested')],
+      {
+        env: {
+          ...process.env,
+          FORCE_COLOR: 1,
+        },
+      }
+    );
 
     if (error) throw error;
 

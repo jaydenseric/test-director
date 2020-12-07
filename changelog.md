@@ -2,11 +2,18 @@
 
 ## Next
 
+### Major
+
+- Updated supported Node.js versions to `^10.17.0 || ^12.0.0 || >= 13.7.0`.
+- Updated dependencies, some of which require newer Node.js versions than were previously supported.
+- The updated [`kleur`](https://npm.im/kleur) dependency causes subtle differences in which environments get colored console output.
+
 ### Patch
 
 - Simplified the GitHub Actions CI config with the [`npm install-test`](https://docs.npmjs.com/cli/v7/commands/npm-install-test) command.
 - Updated the EditorConfig.
 - Use destructuring for `require` of the Node.js `path` API in tests.
+- Use the `FORCE_COLOR` environment variable in tests to ensure output is colorized.
 
 ## 4.0.1
 
