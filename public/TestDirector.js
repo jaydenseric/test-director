@@ -179,7 +179,7 @@ module.exports = class TestDirector {
 
       if (throwOnFailure) throw new Error(message);
 
-      console.info(`\n${message}\n`);
+      console.error(`\n${message}\n`);
     } else console.info(`\n${kleur.green().bold(summary)}\n`);
   }
 };
