@@ -55,7 +55,7 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-passes-stdout.txt')
+      join(SNAPSHOTS_PATH, 'test-passes-stdout.ans')
     );
     strictEqual(stderr.toString(), '');
     strictEqual(status, 0);
@@ -79,7 +79,7 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-outputs-stdout.txt')
+      join(SNAPSHOTS_PATH, 'test-outputs-stdout.ans')
     );
     strictEqual(stderr.toString(), '');
     strictEqual(status, 0);
@@ -103,7 +103,7 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-sequence-stdout.txt')
+      join(SNAPSHOTS_PATH, 'test-sequence-stdout.ans')
     );
     strictEqual(stderr.toString(), '');
     strictEqual(status, 0);
@@ -127,11 +127,11 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-fails-stdout.txt')
+      join(SNAPSHOTS_PATH, 'test-fails-stdout.ans')
     );
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
-      join(SNAPSHOTS_PATH, `test-fails-stderr-node-v${NODE_VERSION_MAJOR}.txt`)
+      join(SNAPSHOTS_PATH, `test-fails-stderr-node-v${NODE_VERSION_MAJOR}.ans`)
     );
     strictEqual(status, 1);
   },
@@ -154,11 +154,11 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-nested-stdout.txt')
+      join(SNAPSHOTS_PATH, 'test-nested-stdout.ans')
     );
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
-      join(SNAPSHOTS_PATH, `test-nested-stderr-node-v${NODE_VERSION_MAJOR}.txt`)
+      join(SNAPSHOTS_PATH, `test-nested-stderr-node-v${NODE_VERSION_MAJOR}.ans`)
     );
     strictEqual(status, 1);
   },
