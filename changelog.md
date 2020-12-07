@@ -12,6 +12,7 @@
 
 ### Patch
 
+- Removed Node.js v13 and added v15 to the versions tested in GitHub Actions CI.
 - Simplified the GitHub Actions CI config with the [`npm install-test`](https://docs.npmjs.com/cli/v7/commands/npm-install-test) command.
 - Updated the EditorConfig.
 - Use destructuring for `require` of the Node.js `path` API in tests.
