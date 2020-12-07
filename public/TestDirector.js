@@ -162,7 +162,7 @@ module.exports = class TestDirector {
 
             // Sometimes nothing remains of the stack after cleaning, e.g. for
             // filesystem errors that have an identical error message and stack.
-            if (cleanStack) console.error(`\n${kleur.red().dim(cleanStack)}`);
+            if (cleanStack) console.error(`\n${kleur.dim().red(cleanStack)}`);
           }
         } else console.error(`\n${kleur.red(inspect(error))}`);
       } finally {
@@ -173,13 +173,13 @@ module.exports = class TestDirector {
     const summary = `${passCount}/${this.tests.size} tests passed.`;
 
     if (passCount < this.tests.size) {
-      const message = kleur.red().bold(summary);
+      const message = kleur.bold().red(summary);
 
       if (throwOnFailure) throw new Error(message);
 
       console.error(`\n${message}\n`);
 
       process.exitCode = 1;
-    } else console.info(`\n${kleur.green().bold(summary)}\n`);
+    } else console.info(`\n${kleur.bold().green(summary)}\n`);
   }
 };

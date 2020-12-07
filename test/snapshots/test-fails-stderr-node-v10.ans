@@ -1,8 +1,8 @@
   
   [31mMessage.[39m
   
-  [31m[2mtests.add (test/fixtures/fails.js:8:9)
-  Object.<anonymous> (test/fixtures/fails.js:41:7)[39m[22m
+  [2m[31mtests.add (test/fixtures/fails.js:8:9)
+  Object.<anonymous> (test/fixtures/fails.js:41:7)[22m[39m
   
   [31mMessage.[39m
   
@@ -14,13 +14,13 @@
   - 0
   + 1[39m
   
-  [31m[2mtests.add (test/fixtures/fails.js:24:3)
-  Object.<anonymous> (test/fixtures/fails.js:41:7)[39m[22m
+  [2m[31mtests.add (test/fixtures/fails.js:24:3)
+  Object.<anonymous> (test/fixtures/fails.js:41:7)[22m[39m
   
   [31mMessage.[39m
   
-  [31m[2mtests.add (test/fixtures/fails.js:27:3)
-  Object.<anonymous> (test/fixtures/fails.js:41:7)[39m[22m
+  [2m[31mtests.add (test/fixtures/fails.js:27:3)
+  Object.<anonymous> (test/fixtures/fails.js:41:7)[22m[39m
   
   [31m{ message: 'Message.' }[39m
   
@@ -30,5 +30,5 @@
   
   [31mnull[39m
 
-[31m[1m0/9 tests passed.[39m[22m
+[1m[31m0/9 tests passed.[22m[39m
 

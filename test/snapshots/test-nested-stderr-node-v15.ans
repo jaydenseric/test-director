@@ -1,14 +1,14 @@
     
     [31mMessage.[39m
     
-    [31m[2mtest/fixtures/nested.js:9:11
+    [2m[31mtest/fixtures/nested.js:9:11
     test/fixtures/nested.js:11:15
-    Object.<anonymous> (test/fixtures/nested.js:13:7)[39m[22m
+    Object.<anonymous> (test/fixtures/nested.js:13:7)[22m[39m
   
-  [31m[31m[1m0/1 tests passed.[39m[31m[22m[39m
+  [31m[1m[31m0/1 tests passed.[22m[39m[31m[39m
   
   test/fixtures/nested.js:11:15
-  Object.<anonymous> (test/fixtures/nested.js:13:7)[39m[22m
+  Object.<anonymous> (test/fixtures/nested.js:13:7)[22m[39m
 
-[31m[1m0/1 tests passed.[39m[22m
+[1m[31m0/1 tests passed.[22m[39m
 
