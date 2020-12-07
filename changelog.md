@@ -7,6 +7,7 @@
 - Updated supported Node.js versions to `^10.17.0 || ^12.0.0 || >= 13.7.0`.
 - Updated dependencies, some of which require newer Node.js versions than were previously supported.
 - The updated [`kleur`](https://npm.im/kleur) dependency causes subtle differences in which environments get colored console output.
+- Removed the package `module` field.
 
 ### Patch
 
