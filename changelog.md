@@ -5,6 +5,10 @@
 ### Patch
 
 - Updated dev dependencies.
+- Updated GitHub Actions CI config:
+  - Updated `actions/checkout` to v2.
+  - Updated `actions/setup-node` to v2.
+  - Don’t specify the `CI` environment variable as it’s set by default.
 
 ## 5.0.0
 
