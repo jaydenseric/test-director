@@ -4,7 +4,7 @@
 
 An ultra lightweight unit test director for Node.js.
 
-Works well with any assertion library that throws errors, such as the [Node.js `assert` API](https://nodejs.org/api/assert.html) and [`snapshot-assertion`](https://github.com/jaydenseric/snapshot-assertion).
+Works well with any assertion library that throws errors, such as the [Node.js `assert` API](https://nodejs.org/api/assert.html) and [`snapshot-assertion`](https://npm.im/snapshot-assertion).
 
 Use [`coverage-node`](https://npm.im/coverage-node) to run your test script and report code coverage.
 

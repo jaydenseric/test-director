@@ -10,6 +10,7 @@
   - Updated `actions/setup-node` to v2.
   - Don’t specify the `CI` environment variable as it’s set by default.
 - Use the regex flag `u`.
+- Changed the [`snapshot-assertion`](https://npm.im/snapshot-assertion`) link in the readme from GitHub to npm.
 - Recommend [`coverage-node`](https://npm.im/coverage-node) in the readme.
 
 ## 5.0.0
