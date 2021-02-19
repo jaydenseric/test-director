@@ -4,7 +4,7 @@
 
 ### Patch
 
-- Updated dev dependencies.
+- Updated dependencies.
 - Updated GitHub Actions CI config:
   - Updated `actions/checkout` to v2.
   - Updated `actions/setup-node` to v2.
