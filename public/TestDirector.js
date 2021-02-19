@@ -154,7 +154,7 @@ module.exports = class TestDirector {
                   ? // Remove the leading message as stack-utils doesn’t do
                     // this for assertion errors. This can leave leading
                     // newlines.
-                    error.stack.replace(/^(?! {4}at ).*$/gm, '')
+                    error.stack.replace(/^(?! {4}at ).*$/gmu, '')
                   : error.stack
               )
               // Remove leading or trailing newlines.
