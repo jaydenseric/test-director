@@ -10,6 +10,7 @@
   - Updated `actions/setup-node` to v2.
   - Don’t specify the `CI` environment variable as it’s set by default.
 - Use the regex flag `u`.
+- Recommend [`coverage-node`](https://npm.im/coverage-node) in the readme.
 
 ## 5.0.0
 
