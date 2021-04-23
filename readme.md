@@ -18,7 +18,7 @@ npm install test-director --save-dev
 
 ## Support
 
-- Node.js `^10.17.0 || ^12.0.0 || >= 13.7.0`
+- Node.js `^12.20 || >= 14.13`
 
 ## API
 
@@ -52,7 +52,7 @@ _Ways to `require`._
 > ```
 >
 > ```js
-> const TestDirector = require('test-director/public/TestDirector');
+> const TestDirector = require('test-director/public/TestDirector.js');
 > ```
 
 _How to construct a new test director._

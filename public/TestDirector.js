@@ -22,7 +22,7 @@ const StackUtils = require('stack-utils');
  * ```
  *
  * ```js
- * const TestDirector = require('test-director/public/TestDirector');
+ * const TestDirector = require('test-director/public/TestDirector.js');
  * ```
  * @example <caption>How to construct a new test director.</caption>
  * ```js
