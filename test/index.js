@@ -9,7 +9,6 @@ const simulatePublishedTraces = require('./simulatePublishedTraces.js');
 
 const FIXTURES_PATH = join(__dirname, 'fixtures');
 const SNAPSHOTS_PATH = join(__dirname, 'snapshots');
-const NODE_VERSION_MAJOR = parseInt(process.versions.node.split('.')[0]);
 
 const tests = [
   () => {
@@ -131,7 +130,7 @@ const tests = [
     );
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
-      join(SNAPSHOTS_PATH, `test-fails-stderr-node-v${NODE_VERSION_MAJOR}.ans`)
+      join(SNAPSHOTS_PATH, 'test-fails-stderr.ans')
     );
     strictEqual(status, 1);
   },
@@ -158,7 +157,7 @@ const tests = [
     );
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
-      join(SNAPSHOTS_PATH, `test-nested-stderr-node-v${NODE_VERSION_MAJOR}.ans`)
+      join(SNAPSHOTS_PATH, 'test-nested-stderr.ans')
     );
     strictEqual(status, 1);
   },
