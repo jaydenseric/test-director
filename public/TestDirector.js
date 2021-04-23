@@ -70,7 +70,7 @@ module.exports = class TestDirector {
    * tests.add('GitHub is up.', async () => {
    *   const { ok } = await fetch('https://github.com');
    *   ok(ok);
-   * })
+   * });
    *
    * tests.run();
    * ```
