@@ -15,7 +15,9 @@ const tests = [
     console.info('Test: Add two tests with the same name.');
 
     const tests = new TestDirector();
+
     tests.add('a', () => {});
+
     throws(
       () => {
         tests.add('a', () => {});
@@ -28,6 +30,7 @@ const tests = [
     console.info('Test: Test with an invalid test function type.');
 
     const tests = new TestDirector();
+
     throws(
       () => {
         tests.add('a', '');
@@ -56,6 +59,7 @@ const tests = [
       stdout.toString(),
       join(SNAPSHOTS_PATH, 'test-passes-stdout.ans')
     );
+
     strictEqual(stderr.toString(), '');
     strictEqual(status, 0);
   },
@@ -80,6 +84,7 @@ const tests = [
       stdout.toString(),
       join(SNAPSHOTS_PATH, 'test-outputs-stdout.ans')
     );
+
     strictEqual(stderr.toString(), '');
     strictEqual(status, 0);
   },
@@ -104,6 +109,7 @@ const tests = [
       stdout.toString(),
       join(SNAPSHOTS_PATH, 'test-sequence-stdout.ans')
     );
+
     strictEqual(stderr.toString(), '');
     strictEqual(status, 0);
   },
@@ -128,10 +134,12 @@ const tests = [
       stdout.toString(),
       join(SNAPSHOTS_PATH, 'test-fails-stdout.ans')
     );
+
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
       join(SNAPSHOTS_PATH, 'test-fails-stderr.ans')
     );
+
     strictEqual(status, 1);
   },
 
@@ -155,10 +163,12 @@ const tests = [
       stdout.toString(),
       join(SNAPSHOTS_PATH, 'test-nested-stdout.ans')
     );
+
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
       join(SNAPSHOTS_PATH, 'test-nested-stderr.ans')
     );
+
     strictEqual(status, 1);
   },
 ];

@@ -3,7 +3,9 @@
 const TestDirector = require('../../public/TestDirector.js');
 
 const tests = new TestDirector();
+
 tests.add('a', () => {
   console.info('Message.');
 });
+
 tests.run();

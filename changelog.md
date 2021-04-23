@@ -21,6 +21,7 @@
 - Changed the [`snapshot-assertion`](https://npm.im/snapshot-assertion`) link in the readme from GitHub to npm.
 - Recommend [`coverage-node`](https://npm.im/coverage-node) in the readme.
 - Prettier formatting fix for a code example.
+- Whitespace formatting tweaks.
 
 ## 5.0.0
 
