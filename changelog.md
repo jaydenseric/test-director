@@ -11,6 +11,7 @@
 
 - Updated dependencies.
 - Updated GitHub Actions CI config:
+  - Also run tests with Node.js v16.
   - Updated `actions/checkout` to v2.
   - Updated `actions/setup-node` to v2.
   - Don’t specify the `CI` environment variable as it’s set by default.
