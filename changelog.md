@@ -18,6 +18,7 @@
   - Updated `actions/setup-node` to v2.
   - Don’t specify the `CI` environment variable as it’s set by default.
 - Use the regex flag `u`.
+- Throw a more specific runtime argument `TypeError`.
 - Stop snapshot testing major Node.js versions separately, as they all produce the same results now.
 - Changed the [`snapshot-assertion`](https://npm.im/snapshot-assertion`) link in the readme from GitHub to npm.
 - Recommend [`coverage-node`](https://npm.im/coverage-node) in the readme.

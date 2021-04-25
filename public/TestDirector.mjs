@@ -69,7 +69,8 @@ export default class TestDirector {
     if (this.tests.has(name))
       throw new Error(`A test called \`${name}\` has already been added.`);
 
-    if (typeof test !== 'function') throw new Error('Test must be a function.');
+    if (typeof test !== 'function')
+      throw new TypeError('Argument 2 `test` must be a function.');
 
     this.tests.set(name, test);
   }

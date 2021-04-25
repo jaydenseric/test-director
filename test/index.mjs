@@ -13,12 +13,9 @@ const tests = [
 
     tests.add('a', () => {});
 
-    throws(
-      () => {
-        tests.add('a', () => {});
-      },
-      { message: 'A test called `a` has already been added.' }
-    );
+    throws(() => {
+      tests.add('a', () => {});
+    }, new Error('A test called `a` has already been added.'));
   },
 
   () => {
@@ -26,12 +23,9 @@ const tests = [
 
     const tests = new TestDirector();
 
-    throws(
-      () => {
-        tests.add('a', '');
-      },
-      { message: 'Test must be a function.' }
-    );
+    throws(() => {
+      tests.add('a', '');
+    }, new TypeError('Argument 2 `test` must be a function.'));
   },
 
   async () => {
