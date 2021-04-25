@@ -42,17 +42,7 @@ _Ways to `import`._
 > ```
 >
 > ```js
-> import TestDirector from 'test-director/public/TestDirector.js';
-> ```
-
-_Ways to `require`._
-
-> ```js
-> const { TestDirector } = require('test-director');
-> ```
->
-> ```js
-> const TestDirector = require('test-director/public/TestDirector.js');
+> import TestDirector from 'test-director/public/TestDirector.mjs';
 > ```
 
 _How to construct a new test director._
@@ -75,8 +65,8 @@ Adds a test.
 _A sync test._
 
 > ```js
-> const { equal } = require('assert');
-> const { TestDirector } = require('test-director');
+> import { equal } from 'assert';
+> import { TestDirector } from 'test-director';
 >
 > const tests = new TestDirector();
 >
@@ -90,9 +80,9 @@ _A sync test._
 _An async test._
 
 > ```js
-> const { ok } = require('assert');
-> const fetch = require('node-fetch');
-> const { TestDirector } = require('test-director');
+> import { ok } from 'assert';
+> import fetch from 'node-fetch';
+> import { TestDirector } from 'test-director';
 >
 > const tests = new TestDirector();
 >
@@ -119,7 +109,7 @@ Runs the tests one after another, in the order they were added.
 _Run nested tests._
 
 > ```js
-> const { TestDirector } = require('test-director');
+> import { TestDirector } from 'test-director';
 >
 > const tests = new TestDirector();
 >

@@ -1,8 +1,6 @@
-'use strict';
-
-const { inspect } = require('util');
-const kleur = require('kleur');
-const StackUtils = require('stack-utils');
+import { inspect } from 'util';
+import kleur from 'kleur';
+import StackUtils from 'stack-utils';
 
 /**
  * An ultra lightweight unit test director for Node.js.
@@ -14,22 +12,14 @@ const StackUtils = require('stack-utils');
  * ```
  *
  * ```js
- * import TestDirector from 'test-director/public/TestDirector.js';
- * ```
- * @example <caption>Ways to `require`.</caption>
- * ```js
- * const { TestDirector } = require('test-director');
- * ```
- *
- * ```js
- * const TestDirector = require('test-director/public/TestDirector.js');
+ * import TestDirector from 'test-director/public/TestDirector.mjs';
  * ```
  * @example <caption>How to construct a new test director.</caption>
  * ```js
  * const tests = new TestDirector();
  * ```
  */
-module.exports = class TestDirector {
+export default class TestDirector {
   constructor() {
     /**
      * A map of test functions that have been added, keyed by their test names.
@@ -48,8 +38,8 @@ module.exports = class TestDirector {
    * @param {Function} test Test to run; may return a `Promise`.
    * @example <caption>A sync test.</caption>
    * ```js
-   * const { equal } = require('assert');
-   * const { TestDirector } = require('test-director');
+   * import { equal } from 'assert';
+   * import { TestDirector } from 'test-director';
    *
    * const tests = new TestDirector();
    *
@@ -61,9 +51,9 @@ module.exports = class TestDirector {
    * ```
    * @example <caption>An async test.</caption>
    * ```js
-   * const { ok } = require('assert');
-   * const fetch = require('node-fetch');
-   * const { TestDirector } = require('test-director');
+   * import { ok } from 'assert';
+   * import fetch from 'node-fetch';
+   * import { TestDirector } from 'test-director';
    *
    * const tests = new TestDirector();
    *
@@ -92,7 +82,7 @@ module.exports = class TestDirector {
    * @returns {Promise<void>} Resolves once tests have run.
    * @example <caption>Run nested tests.</caption>
    * ```js
-   * const { TestDirector } = require('test-director');
+   * import { TestDirector } from 'test-director';
    *
    * const tests = new TestDirector();
    *
@@ -182,4 +172,4 @@ module.exports = class TestDirector {
       process.exitCode = 1;
     } else console.info(`\n${kleur.bold().green(summary)}\n`);
   }
-};
+}

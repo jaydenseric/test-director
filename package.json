@@ -22,12 +22,9 @@
     "public"
   ],
   "sideEffects": false,
-  "main": "public",
+  "main": "./public/index.mjs",
   "exports": {
-    ".": {
-      "import": "./public/index.mjs",
-      "require": "./public/index.js"
-    },
+    ".": "./public/index.mjs",
     "./public/*": "./public/*",
     "./package": "./package.json",
     "./package.json": "./package.json"
@@ -57,9 +54,9 @@
     "prepare:jsdoc": "jsdoc-md",
     "prepare:prettier": "prettier --write readme.md",
     "test": "npm run test:eslint && npm run test:prettier && npm run test:api",
-    "test:eslint": "eslint .",
+    "test:eslint": "eslint --ext mjs,js .",
     "test:prettier": "prettier -c .",
-    "test:api": "coverage-node test",
+    "test:api": "coverage-node test/index.mjs",
     "prepublishOnly": "npm test"
   }
 }

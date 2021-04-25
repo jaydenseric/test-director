@@ -1,6 +1,4 @@
-'use strict';
-
-const TestDirector = require('../../public/TestDirector.js');
+import TestDirector from '../../public/TestDirector.mjs';
 
 const tests = new TestDirector();
 

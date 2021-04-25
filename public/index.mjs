@@ -1,1 +1,1 @@
-export { default as TestDirector } from './TestDirector.js';
+export { default as TestDirector } from './TestDirector.mjs';

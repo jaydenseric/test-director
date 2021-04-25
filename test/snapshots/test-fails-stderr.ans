@@ -1,8 +1,8 @@
   
   [31mMessage.[39m
   
-  [2m[31mtest/fixtures/fails.js:9:9
-  Object.<anonymous> (test/fixtures/fails.js:51:7)[22m[39m
+  [2m[31mfile://test/fixtures/fails.mjs:7:9
+  file://test/fixtures/fails.mjs:49:7[22m[39m
   
   [31mMessage.[39m
   
@@ -12,13 +12,13 @@
   
   0 !== 1[39m
   
-  [2m[31mtest/fixtures/fails.js:28:3
-  Object.<anonymous> (test/fixtures/fails.js:51:7)[22m[39m
+  [2m[31mfile://test/fixtures/fails.mjs:26:3
+  file://test/fixtures/fails.mjs:49:7[22m[39m
   
   [31mMessage.[39m
   
-  [2m[31mtest/fixtures/fails.js:32:3
-  Object.<anonymous> (test/fixtures/fails.js:51:7)[22m[39m
+  [2m[31mfile://test/fixtures/fails.mjs:30:3
+  file://test/fixtures/fails.mjs:49:7[22m[39m
   
   [31m{ message: 'Message.' }[39m
   

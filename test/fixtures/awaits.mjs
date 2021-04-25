@@ -1,7 +1,5 @@
-'use strict';
-
-const TestDirector = require('../../public/TestDirector.js');
-const sleep = require('../sleep.js');
+import TestDirector from '../../public/TestDirector.mjs';
+import sleep from '../sleep.mjs';
 
 const tests = new TestDirector();
 

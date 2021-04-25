@@ -1,7 +1,5 @@
-'use strict';
-
-const { strictEqual } = require('assert');
-const TestDirector = require('../../public/TestDirector.js');
+import { strictEqual } from 'assert';
+import TestDirector from '../../public/TestDirector.mjs';
 
 const tests = new TestDirector();
 

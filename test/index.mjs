@@ -1,14 +1,9 @@
-'use strict';
-
-const { throws, strictEqual } = require('assert');
-const { spawnSync } = require('child_process');
-const { join } = require('path');
-const snapshot = require('snapshot-assertion');
-const TestDirector = require('../public/TestDirector.js');
-const simulatePublishedTraces = require('./simulatePublishedTraces.js');
-
-const FIXTURES_PATH = join(__dirname, 'fixtures');
-const SNAPSHOTS_PATH = join(__dirname, 'snapshots');
+import { strictEqual, throws } from 'assert';
+import { spawnSync } from 'child_process';
+import { fileURLToPath } from 'url';
+import snapshot from 'snapshot-assertion';
+import TestDirector from '../public/TestDirector.mjs';
+import simulatePublishedTraces from './simulatePublishedTraces.mjs';
 
 const tests = [
   () => {
@@ -44,7 +39,7 @@ const tests = [
 
     const { stdout, stderr, status, error } = spawnSync(
       'node',
-      [join(FIXTURES_PATH, 'passes')],
+      [fileURLToPath(new URL('./fixtures/passes.mjs', import.meta.url))],
       {
         env: {
           ...process.env,
@@ -57,7 +52,7 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-passes-stdout.ans')
+      new URL('./snapshots/test-passes-stdout.ans', import.meta.url)
     );
 
     strictEqual(stderr.toString(), '');
@@ -69,7 +64,7 @@ const tests = [
 
     const { stdout, stderr, status, error } = spawnSync(
       'node',
-      [join(FIXTURES_PATH, 'output')],
+      [fileURLToPath(new URL('./fixtures/output.mjs', import.meta.url))],
       {
         env: {
           ...process.env,
@@ -82,7 +77,7 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-outputs-stdout.ans')
+      new URL('./snapshots/test-outputs-stdout.ans', import.meta.url)
     );
 
     strictEqual(stderr.toString(), '');
@@ -94,7 +89,7 @@ const tests = [
 
     const { stdout, stderr, status, error } = spawnSync(
       'node',
-      [join(FIXTURES_PATH, 'awaits')],
+      [fileURLToPath(new URL('./fixtures/awaits.mjs', import.meta.url))],
       {
         env: {
           ...process.env,
@@ -107,7 +102,7 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-sequence-stdout.ans')
+      new URL('./snapshots/test-sequence-stdout.ans', import.meta.url)
     );
 
     strictEqual(stderr.toString(), '');
@@ -119,7 +114,7 @@ const tests = [
 
     const { stdout, stderr, status, error } = spawnSync(
       'node',
-      [join(FIXTURES_PATH, 'fails')],
+      [fileURLToPath(new URL('./fixtures/fails.mjs', import.meta.url))],
       {
         env: {
           ...process.env,
@@ -132,12 +127,12 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-fails-stdout.ans')
+      new URL('./snapshots/test-fails-stdout.ans', import.meta.url)
     );
 
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
-      join(SNAPSHOTS_PATH, 'test-fails-stderr.ans')
+      new URL('./snapshots/test-fails-stderr.ans', import.meta.url)
     );
 
     strictEqual(status, 1);
@@ -148,7 +143,7 @@ const tests = [
 
     const { stdout, stderr, status, error } = spawnSync(
       'node',
-      [join(FIXTURES_PATH, 'nested')],
+      [fileURLToPath(new URL('./fixtures/nested.mjs', import.meta.url))],
       {
         env: {
           ...process.env,
@@ -161,12 +156,12 @@ const tests = [
 
     await snapshot(
       stdout.toString(),
-      join(SNAPSHOTS_PATH, 'test-nested-stdout.ans')
+      new URL('./snapshots/test-nested-stdout.ans', import.meta.url)
     );
 
     await snapshot(
       simulatePublishedTraces(stderr.toString()),
-      join(SNAPSHOTS_PATH, 'test-nested-stderr.ans')
+      new URL('./snapshots/test-nested-stderr.ans', import.meta.url)
     );
 
     strictEqual(status, 1);

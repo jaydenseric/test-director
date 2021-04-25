@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Manually removes error trace lines from console output that would normally be
  * ignored via the `stack-utils` option `ignoredPackages` when the published
@@ -18,6 +16,9 @@
  * @returns {string} Simulated output.
  * @ignore
  */
-module.exports = function simulatePublishedTraces(output) {
-  return output.replace(/^.*\(public\/TestDirector\.js:.*$(?:\r\n?|\n)/gmu, '');
-};
+export default function simulatePublishedTraces(output) {
+  return output.replace(
+    /^.*\(file:\/\/public\/TestDirector\.mjs:.*$(?:\r\n?|\n)/gmu,
+    ''
+  );
+}
