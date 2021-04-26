@@ -24,6 +24,7 @@
 - Recommend [`coverage-node`](https://npm.im/coverage-node) in the readme.
 - Prettier formatting fix for a code example.
 - Whitespace formatting tweaks.
+- Linked [Node.js](https://nodejs.org) in the readme.
 
 ## 5.0.0
 
