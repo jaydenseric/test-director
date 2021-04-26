@@ -7,6 +7,16 @@ import simulatePublishedTraces from './simulatePublishedTraces.mjs';
 
 const tests = [
   () => {
+    console.info('Test: Test with an invalid test name type.');
+
+    const tests = new TestDirector();
+
+    throws(() => {
+      tests.add(true, () => {});
+    }, new TypeError('Argument 1 `name` must be a string.'));
+  },
+
+  () => {
     console.info('Test: Add two tests with the same name.');
 
     const tests = new TestDirector();

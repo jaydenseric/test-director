@@ -62,6 +62,9 @@ export default class TestDirector {
    * ```
    */
   add(name, test) {
+    if (typeof name !== 'string')
+      throw new TypeError('Argument 1 `name` must be a string.');
+
     if (this.tests.has(name))
       throw new Error(`A test called \`${name}\` has already been added.`);
 

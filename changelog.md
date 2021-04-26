@@ -7,6 +7,7 @@
 - Updated Node.js support to `^12.20 || >= 14.13`.
 - The API is now ESM in `.mjs` files instead of CJS in `.js` files, [accessible via `import` but not `require`](https://nodejs.org/dist/latest/docs/api/esm.html#esm_require).
 - The `TestDirector` class is now only accessible via a default `import` from the main index.
+- The `TesDirector` instance method `add` now throws a `TypeError` if argument 1 `name` is not a string.
 
 ### Patch
 
@@ -18,7 +19,7 @@
   - Updated `actions/setup-node` to v2.
   - Don’t specify the `CI` environment variable as it’s set by default.
 - Use the regex flag `u`.
-- Throw a more specific runtime argument `TypeError`.
+- The `TesDirector` instance method `add` now throws a more specific `TypeError` if argument 2 `test` is not a function.
 - Stop snapshot testing major Node.js versions separately, as they all produce the same results now.
 - Changed the [`snapshot-assertion`](https://npm.im/snapshot-assertion`) link in the readme from GitHub to npm.
 - Recommend [`coverage-node`](https://npm.im/coverage-node) in the readme.
