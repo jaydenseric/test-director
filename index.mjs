@@ -6,15 +6,11 @@ import StackUtils from 'stack-utils';
  * An ultra lightweight unit test director for Node.js.
  * @kind class
  * @name TestDirector
- * @example <caption>Ways to `import`.</caption>
+ * @example <caption>How to `import`.</caption>
  * ```js
- * import { TestDirector } from 'test-director';
+ * import TestDirector from 'test-director';
  * ```
- *
- * ```js
- * import TestDirector from 'test-director/public/TestDirector.mjs';
- * ```
- * @example <caption>How to construct a new test director.</caption>
+ * @example <caption>How to construct a new instance.</caption>
  * ```js
  * const tests = new TestDirector();
  * ```
@@ -39,7 +35,7 @@ export default class TestDirector {
    * @example <caption>A sync test.</caption>
    * ```js
    * import { equal } from 'assert';
-   * import { TestDirector } from 'test-director';
+   * import TestDirector from 'test-director';
    *
    * const tests = new TestDirector();
    *
@@ -53,7 +49,7 @@ export default class TestDirector {
    * ```js
    * import { ok } from 'assert';
    * import fetch from 'node-fetch';
-   * import { TestDirector } from 'test-director';
+   * import TestDirector from 'test-director';
    *
    * const tests = new TestDirector();
    *
@@ -83,7 +79,7 @@ export default class TestDirector {
    * @returns {Promise<void>} Resolves once tests have run.
    * @example <caption>Run nested tests.</caption>
    * ```js
-   * import { TestDirector } from 'test-director';
+   * import TestDirector from 'test-director';
    *
    * const tests = new TestDirector();
    *

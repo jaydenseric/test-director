@@ -1,4 +1,4 @@
-import TestDirector from '../../public/TestDirector.mjs';
+import TestDirector from '../../index.mjs';
 
 const tests = new TestDirector();
 

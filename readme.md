@@ -35,17 +35,13 @@ An ultra lightweight unit test director for Node.js.
 
 #### Examples
 
-_Ways to `import`._
+_How to `import`._
 
 > ```js
-> import { TestDirector } from 'test-director';
-> ```
->
-> ```js
-> import TestDirector from 'test-director/public/TestDirector.mjs';
+> import TestDirector from 'test-director';
 > ```
 
-_How to construct a new test director._
+_How to construct a new instance._
 
 > ```js
 > const tests = new TestDirector();
@@ -66,7 +62,7 @@ _A sync test._
 
 > ```js
 > import { equal } from 'assert';
-> import { TestDirector } from 'test-director';
+> import TestDirector from 'test-director';
 >
 > const tests = new TestDirector();
 >
@@ -82,7 +78,7 @@ _An async test._
 > ```js
 > import { ok } from 'assert';
 > import fetch from 'node-fetch';
-> import { TestDirector } from 'test-director';
+> import TestDirector from 'test-director';
 >
 > const tests = new TestDirector();
 >
@@ -109,7 +105,7 @@ Runs the tests one after another, in the order they were added.
 _Run nested tests._
 
 > ```js
-> import { TestDirector } from 'test-director';
+> import TestDirector from 'test-director';
 >
 > const tests = new TestDirector();
 >

@@ -2,7 +2,7 @@ import { strictEqual, throws } from 'assert';
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import snapshot from 'snapshot-assertion';
-import TestDirector from '../public/TestDirector.mjs';
+import TestDirector from '../index.mjs';
 import simulatePublishedTraces from './simulatePublishedTraces.mjs';
 
 const tests = [
