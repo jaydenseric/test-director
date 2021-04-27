@@ -36,15 +36,15 @@
     "stack-utils": "^2.0.3"
   },
   "devDependencies": {
-    "coverage-node": "^4.0.0",
+    "coverage-node": "^5.0.0",
     "eslint": "^7.25.0",
     "eslint-config-env": "^19.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^32.3.1",
+    "eslint-plugin-jsdoc": "^32.3.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "jsdoc-md": "^9.1.1",
+    "jsdoc-md": "^10.0.1",
     "prettier": "^2.2.1",
     "snapshot-assertion": "^2.0.0"
   },

@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Updated dev dependencies.
+
 ## 6.0.0
 
 ### Major
