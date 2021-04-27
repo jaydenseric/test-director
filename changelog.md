@@ -5,6 +5,7 @@
 ### Patch
 
 - Updated dev dependencies.
+- Replaced the package `prepare` script with a `jsdoc` script.
 
 ## 6.0.0
 

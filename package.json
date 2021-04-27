@@ -49,13 +49,11 @@
     "snapshot-assertion": "^2.0.0"
   },
   "scripts": {
-    "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
-    "prepare:jsdoc": "jsdoc-md",
-    "prepare:prettier": "prettier --write readme.md",
+    "jsdoc": "jsdoc-md",
     "test": "npm run test:eslint && npm run test:prettier && npm run test:api",
     "test:eslint": "eslint --ext mjs,js .",
     "test:prettier": "prettier -c .",
     "test:api": "coverage-node test/index.mjs",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm run jsdoc && npm test"
   }
 }
