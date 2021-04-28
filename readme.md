@@ -10,7 +10,7 @@ Use [`coverage-node`](https://npm.im/coverage-node) to run your test script and 
 
 ## Setup
 
-To install from [npm](https://npmjs.com) run:
+To install with [npm](https://npmjs.com/get-npm), run:
 
 ```sh
 npm install test-director --save-dev

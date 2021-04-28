@@ -6,6 +6,7 @@
 
 - Updated dev dependencies.
 - Replaced the package `prepare` script with a `jsdoc` script.
+- Readme tweaks.
 
 ## 6.0.0
 
