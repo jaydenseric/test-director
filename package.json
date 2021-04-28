@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "jsdoc-md": "^10.0.1",
     "prettier": "^2.2.1",
-    "snapshot-assertion": "^2.0.0"
+    "snapshot-assertion": "^3.0.0"
   },
   "scripts": {
     "jsdoc": "jsdoc-md",
