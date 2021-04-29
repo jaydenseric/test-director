@@ -6,6 +6,7 @@
 
 - Updated dev dependencies.
 - Replaced the package `prepare` script with a `jsdoc` script.
+- Added a package `test:jsdoc` script that checks the readme API docs are up to date with the source JSDoc.
 - Readme tweaks.
 
 ## 6.0.0
