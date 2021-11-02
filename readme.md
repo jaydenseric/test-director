@@ -18,7 +18,7 @@ npm install test-director --save-dev
 
 ## Support
 
-- [Node.js](https://nodejs.org): `^12.20 || >= 14.13`
+- [Node.js](https://nodejs.org): `^12.20.0 || ^14.13.1 || >= 16.0.0`
 
 ## API
 
