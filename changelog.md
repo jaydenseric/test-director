@@ -5,10 +5,11 @@
 ### Major
 
 - Updated Node.js support to `^12.20.0 || ^14.13.1 || >= 16.0.0`.
+- Updated dev dependencies, some of which require newer Node.js versions than previously supported.
 
 ### Patch
 
-- Updated dev dependencies.
+- Updated dependencies.
 - Replaced the package `prepare` script with a `jsdoc` script.
 - Added a package `test:jsdoc` script that checks the readme API docs are up to date with the source JSDoc.
 - Also run GitHub Actions CI with Node.js v17.

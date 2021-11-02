@@ -22,8 +22,6 @@ npm install test-director --save-dev
 
 ## API
 
-### Table of contents
-
 - [class TestDirector](#class-testdirector)
   - [TestDirector instance method add](#testdirector-instance-method-add)
   - [TestDirector instance method run](#testdirector-instance-method-run)

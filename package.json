@@ -33,19 +33,19 @@
   },
   "dependencies": {
     "kleur": "^4.1.4",
-    "stack-utils": "^2.0.3"
+    "stack-utils": "^2.0.5"
   },
   "devDependencies": {
-    "coverage-node": "^5.0.0",
-    "eslint": "^7.25.0",
-    "eslint-config-env": "^19.0.1",
+    "coverage-node": "^5.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-env": "^22.0.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^32.3.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsdoc": "^36.1.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "jsdoc-md": "^10.1.0",
-    "prettier": "^2.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jsdoc-md": "^11.0.2",
+    "prettier": "^2.4.1",
     "snapshot-assertion": "^3.0.0"
   },
   "scripts": {
