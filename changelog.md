@@ -8,6 +8,10 @@
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
 - Removed `./package` from the package `exports` field; the full `package.json` filename must be used in a `require` path.
 
+### Patch
+
+- Simplified package scripts.
+
 ## 7.0.0
 
 ### Major
