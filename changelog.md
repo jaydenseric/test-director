@@ -11,6 +11,7 @@
 ### Patch
 
 - Simplified package scripts.
+- Configured Prettier option `singleQuote` to the default, `false`.
 
 ## 7.0.0
 

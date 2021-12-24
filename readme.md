@@ -36,7 +36,7 @@ An ultra lightweight unit test director for Node.js.
 _How to `import`._
 
 > ```js
-> import TestDirector from 'test-director';
+> import TestDirector from "test-director";
 > ```
 
 _How to construct a new instance._
@@ -59,12 +59,12 @@ Adds a test.
 _A sync test._
 
 > ```js
-> import { equal } from 'assert';
-> import TestDirector from 'test-director';
+> import { equal } from "assert";
+> import TestDirector from "test-director";
 >
 > const tests = new TestDirector();
 >
-> tests.add('JavaScript addition.', () => {
+> tests.add("JavaScript addition.", () => {
 >   equal(1 + 1, 2);
 > });
 >
@@ -74,14 +74,14 @@ _A sync test._
 _An async test._
 
 > ```js
-> import { ok } from 'assert';
-> import fetch from 'node-fetch';
-> import TestDirector from 'test-director';
+> import { ok } from "assert";
+> import fetch from "node-fetch";
+> import TestDirector from "test-director";
 >
 > const tests = new TestDirector();
 >
-> tests.add('GitHub is up.', async () => {
->   const { ok } = await fetch('https://github.com');
+> tests.add("GitHub is up.", async () => {
+>   const { ok } = await fetch("https://github.com");
 >   ok(ok);
 > });
 >
@@ -103,25 +103,25 @@ Runs the tests one after another, in the order they were added.
 _Run nested tests._
 
 > ```js
-> import TestDirector from 'test-director';
+> import TestDirector from "test-director";
 >
 > const tests = new TestDirector();
 >
-> tests.add('Test A.', async () => {
+> tests.add("Test A.", async () => {
 >   const tests = new TestDirector();
 >
->   tests.add('Test B.', () => {
+>   tests.add("Test B.", () => {
 >     // …
 >   });
 >
->   tests.add('Test C.', () => {
+>   tests.add("Test C.", () => {
 >     // …
 >   });
 >
 >   await tests.run(true);
 > });
 >
-> tests.add('Test D.', () => {
+> tests.add("Test D.", () => {
 >   // …
 > });
 >
