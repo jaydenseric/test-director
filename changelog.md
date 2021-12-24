@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Major
+
+- Updated Node.js support to `^12.22.0 || ^14.17.0 || >= 16.0.0`.
+
 ## 7.0.0
 
 ### Major
