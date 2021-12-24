@@ -19,13 +19,14 @@
     "mjs"
   ],
   "files": [
-    "index.mjs"
+    "TestDirector.mjs"
   ],
   "sideEffects": false,
-  "main": "./index.mjs",
+  "main": "./TestDirector.mjs",
   "exports": {
-    ".": "./index.mjs",
-    "./package.json": "./package.json"
+    ".": "./TestDirector.mjs",
+    "./package.json": "./package.json",
+    "./TestDirector.mjs": "./TestDirector.mjs"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >= 16.0.0"

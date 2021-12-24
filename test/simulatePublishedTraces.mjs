@@ -17,5 +17,8 @@
  * @ignore
  */
 export default function simulatePublishedTraces(output) {
-  return output.replace(/^.*\(file:\/\/index\.mjs:.*$(?:\r\n?|\n)/gmu, "");
+  return output.replace(
+    /^.*\(file:\/\/TestDirector\.mjs:.*$(?:\r\n?|\n)/gmu,
+    ""
+  );
 }

@@ -6,9 +6,13 @@ import StackUtils from "stack-utils";
  * An ultra lightweight unit test director for Node.js.
  * @kind class
  * @name TestDirector
- * @example <caption>How to `import`.</caption>
+ * @example <caption>Ways to import.</caption>
  * ```js
  * import TestDirector from "test-director";
+ * ```
+ *
+ * ```js
+ * import TestDirector from "test-director/TestDirector.mjs";
  * ```
  * @example <caption>How to construct a new instance.</caption>
  * ```js

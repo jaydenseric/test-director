@@ -1,4 +1,4 @@
-import TestDirector from "../../index.mjs";
+import TestDirector from "../../TestDirector.mjs";
 import sleep from "../sleep.mjs";
 
 const tests = new TestDirector();

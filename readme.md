@@ -33,10 +33,14 @@ An ultra lightweight unit test director for Node.js.
 
 #### Examples
 
-_How to `import`._
+_Ways to import._
 
 > ```js
 > import TestDirector from "test-director";
+> ```
+>
+> ```js
+> import TestDirector from "test-director/TestDirector.mjs";
 > ```
 
 _How to construct a new instance._

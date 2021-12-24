@@ -1,5 +1,5 @@
 import { strictEqual } from "assert";
-import TestDirector from "../../index.mjs";
+import TestDirector from "../../TestDirector.mjs";
 
 const tests = new TestDirector();
 
