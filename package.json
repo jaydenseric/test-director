@@ -37,15 +37,15 @@
   },
   "devDependencies": {
     "coverage-node": "^5.0.1",
-    "eslint": "^7.32.0",
-    "eslint-config-env": "^22.0.0",
+    "eslint": "^8.5.0",
+    "eslint-config-env": "^23.0.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsdoc": "^36.1.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsdoc": "^37.4.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jsdoc-md": "^11.0.2",
-    "prettier": "^2.4.1",
+    "prettier": "^2.5.1",
     "snapshot-assertion": "^3.0.0"
   },
   "scripts": {
