@@ -8,7 +8,7 @@ Works well with any assertion library that throws errors, such as the [Node.js `
 
 Use [`coverage-node`](https://npm.im/coverage-node) to run your test script and report code coverage.
 
-## Setup
+## Installation
 
 To install with [npm](https://npmjs.com/get-npm), run:
 
@@ -16,7 +16,7 @@ To install with [npm](https://npmjs.com/get-npm), run:
 npm install test-director --save-dev
 ```
 
-## Support
+## Requirements
 
 - [Node.js](https://nodejs.org): `^12.22.0 || ^14.17.0 || >= 16.0.0`
 

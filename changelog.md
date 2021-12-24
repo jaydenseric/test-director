@@ -12,6 +12,7 @@
 
 - Simplified package scripts.
 - Configured Prettier option `singleQuote` to the default, `false`.
+- Documentation tweaks.
 
 ## 7.0.0
 
