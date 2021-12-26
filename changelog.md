@@ -16,6 +16,7 @@
 - Check TypeScript types via a new package `types` script.
 - Stopped using the [`kleur`](https://npm.im/kleur) chaining API.
 - Configured Prettier option `singleQuote` to the default, `false`.
+- Fixed a JSDoc example code bug.
 - Documentation tweaks.
 
 ## 7.0.0

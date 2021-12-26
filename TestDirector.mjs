@@ -63,8 +63,8 @@ export default class TestDirector {
    * const tests = new TestDirector();
    *
    * tests.add("GitHub is up.", async () => {
-   *   const { ok } = await fetch("https://github.com");
-   *   ok(ok);
+   *   const response = await fetch("https://github.com");
+   *   ok(response.ok);
    * });
    *
    * tests.run();
