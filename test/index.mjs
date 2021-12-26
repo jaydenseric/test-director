@@ -1,7 +1,7 @@
 import { strictEqual, throws } from "assert";
 import { spawnSync } from "child_process";
 import { fileURLToPath } from "url";
-import snapshot from "snapshot-assertion";
+import assertSnapshot from "snapshot-assertion";
 import TestDirector from "../TestDirector.mjs";
 import simulatePublishedTraces from "./simulatePublishedTraces.mjs";
 
@@ -54,7 +54,7 @@ const tests = [
 
     if (error) throw error;
 
-    await snapshot(
+    await assertSnapshot(
       stdout.toString(),
       new URL("./snapshots/test-passes-stdout.ans", import.meta.url)
     );
@@ -79,7 +79,7 @@ const tests = [
 
     if (error) throw error;
 
-    await snapshot(
+    await assertSnapshot(
       stdout.toString(),
       new URL("./snapshots/test-outputs-stdout.ans", import.meta.url)
     );
@@ -104,7 +104,7 @@ const tests = [
 
     if (error) throw error;
 
-    await snapshot(
+    await assertSnapshot(
       stdout.toString(),
       new URL("./snapshots/test-sequence-stdout.ans", import.meta.url)
     );
@@ -129,12 +129,12 @@ const tests = [
 
     if (error) throw error;
 
-    await snapshot(
+    await assertSnapshot(
       stdout.toString(),
       new URL("./snapshots/test-fails-stdout.ans", import.meta.url)
     );
 
-    await snapshot(
+    await assertSnapshot(
       simulatePublishedTraces(stderr.toString()),
       new URL("./snapshots/test-fails-stderr.ans", import.meta.url)
     );
@@ -158,12 +158,12 @@ const tests = [
 
     if (error) throw error;
 
-    await snapshot(
+    await assertSnapshot(
       stdout.toString(),
       new URL("./snapshots/test-nested-stdout.ans", import.meta.url)
     );
 
-    await snapshot(
+    await assertSnapshot(
       simulatePublishedTraces(stderr.toString()),
       new URL("./snapshots/test-nested-stderr.ans", import.meta.url)
     );
