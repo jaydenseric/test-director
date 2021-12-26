@@ -1,3 +1,6 @@
+// @ts-check
+
+import { AssertionError } from "assert";
 import { inspect } from "util";
 // See: https://github.com/mysticatea/eslint-plugin-node/issues/258
 // eslint-disable-next-line node/file-extension-in-import
@@ -84,7 +87,8 @@ export default class TestDirector {
    * Runs the tests one after another, in the order they were added.
    * @kind function
    * @name TestDirector#run
-   * @param {boolean} [throwOnFailure=false] After tests run, throw an error if some failed.
+   * @param {boolean} [throwOnFailure=false] After tests run, throw an error if
+   *   some failed. Defaults to `false`.
    * @returns {Promise<void>} Resolves once tests have run.
    * @example <caption>Run nested tests.</caption>
    * ```js
@@ -130,7 +134,7 @@ export default class TestDirector {
         if (error instanceof Error) {
           console.error(
             `\n${red(
-              error.code === "ERR_ASSERTION" &&
+              error instanceof AssertionError &&
                 // A manually specified message should be displayed verbatim.
                 error.generatedMessage
                 ? // Remove the trailing newline that all generated assertion
@@ -146,7 +150,7 @@ export default class TestDirector {
             const cleanStack = stackUtils
               // This always leaves a trailing newline.
               .clean(
-                error.code === "ERR_ASSERTION"
+                error instanceof AssertionError
                   ? // Remove the leading message as stack-utils doesn’t do
                     // this for assertion errors. This can leave leading
                     // newlines.

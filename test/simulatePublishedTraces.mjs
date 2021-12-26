@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Manually removes error trace lines from console output that would normally be
  * ignored via the `stack-utils` option `ignoredPackages` when the published
@@ -10,8 +12,6 @@
  * I tried using [`install-from`](https://npm.im/install-from#api) to install
  * the package in `test/fixtures/node_modules` every test run, but then code
  * coverage doesn’t work as it’s a copy of the code that runs.
- * @kind function
- * @name simulatePublishedTraces
  * @param {string} output Console output.
  * @returns {string} Simulated output.
  * @ignore

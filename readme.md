@@ -98,7 +98,7 @@ Runs the tests one after another, in the order they were added.
 
 | Parameter | Type | Description |
 | :-- | :-- | :-- |
-| `throwOnFailure` | boolean? = `false` | After tests run, throw an error if some failed. |
+| `throwOnFailure` | boolean? = `false` | After tests run, throw an error if&#xA;some failed. Defaults to `false`. |
 
 **Returns:** Promise\<void> — Resolves once tests have run.
 

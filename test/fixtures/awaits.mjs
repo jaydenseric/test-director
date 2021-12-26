@@ -1,3 +1,5 @@
+// @ts-check
+
 import TestDirector from "../../TestDirector.mjs";
 import sleep from "../sleep.mjs";
 

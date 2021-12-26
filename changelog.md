@@ -8,10 +8,12 @@
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
 - Removed `./package` from the package `exports` field; the full `package.json` filename must be used in a `require` path.
 - Renamed `index.mjs` to `TestDirector.mjs` and added it to the package `exports` field.
+- Implemented TypeScript types via JSDoc comments.
 
 ### Patch
 
 - Simplified package scripts.
+- Check TypeScript types via a new package `types` script.
 - Stopped using the [`kleur`](https://npm.im/kleur) chaining API.
 - Configured Prettier option `singleQuote` to the default, `false`.
 - Documentation tweaks.

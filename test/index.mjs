@@ -1,3 +1,5 @@
+// @ts-check
+
 import { strictEqual, throws } from "assert";
 import { spawnSync } from "child_process";
 import { fileURLToPath } from "url";
@@ -12,7 +14,11 @@ const tests = [
     const tests = new TestDirector();
 
     throws(() => {
-      tests.add(true, () => {});
+      tests.add(
+        // @ts-ignore Testing invalid.
+        true,
+        () => {}
+      );
     }, new TypeError("Argument 1 `name` must be a string."));
   },
 
@@ -34,7 +40,11 @@ const tests = [
     const tests = new TestDirector();
 
     throws(() => {
-      tests.add("a", "");
+      tests.add(
+        "a",
+        // @ts-ignore Testing invalid.
+        ""
+      );
     }, new TypeError("Argument 2 `test` must be a function."));
   },
 
@@ -47,7 +57,7 @@ const tests = [
       {
         env: {
           ...process.env,
-          FORCE_COLOR: 1,
+          FORCE_COLOR: "1",
         },
       }
     );
@@ -72,7 +82,7 @@ const tests = [
       {
         env: {
           ...process.env,
-          FORCE_COLOR: 1,
+          FORCE_COLOR: "1",
         },
       }
     );
@@ -97,7 +107,7 @@ const tests = [
       {
         env: {
           ...process.env,
-          FORCE_COLOR: 1,
+          FORCE_COLOR: "1",
         },
       }
     );
@@ -122,7 +132,7 @@ const tests = [
       {
         env: {
           ...process.env,
-          FORCE_COLOR: 1,
+          FORCE_COLOR: "1",
         },
       }
     );
@@ -151,7 +161,7 @@ const tests = [
       {
         env: {
           ...process.env,
-          FORCE_COLOR: 1,
+          FORCE_COLOR: "1",
         },
       }
     );
@@ -174,8 +184,6 @@ const tests = [
 
 /**
  * Runs the tests.
- * @kind function
- * @name test
  * @returns {Promise<void>} Resolves once tests are done.
  * @ignore
  */

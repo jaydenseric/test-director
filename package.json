@@ -36,6 +36,8 @@
     "stack-utils": "^2.0.5"
   },
   "devDependencies": {
+    "@types/node": "^17.0.4",
+    "@types/stack-utils": "^2.0.1",
     "coverage-node": "^5.0.1",
     "eslint": "^8.5.0",
     "eslint-config-env": "^23.0.1",
@@ -46,15 +48,17 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jsdoc-md": "^11.0.2",
     "prettier": "^2.5.1",
-    "snapshot-assertion": "^4.0.0"
+    "snapshot-assertion": "^4.0.0",
+    "typescript": "^4.6.0-dev.20211225"
   },
   "scripts": {
     "docs-update": "jsdoc-md",
     "docs-check": "jsdoc-md -c",
     "eslint": "eslint .",
     "prettier": "prettier -c .",
+    "types": "tsc -p jsconfig.json",
     "tests": "coverage-node test/index.mjs",
-    "test": "npm run eslint && npm run prettier && npm run docs-check && npm run tests",
+    "test": "npm run eslint && npm run prettier && npm run types && npm run docs-check && npm run tests",
     "prepublishOnly": "npm test"
   }
 }
