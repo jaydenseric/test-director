@@ -1,5 +1,7 @@
 import { inspect } from "util";
-import kleur from "kleur";
+// See: https://github.com/mysticatea/eslint-plugin-node/issues/258
+// eslint-disable-next-line node/file-extension-in-import
+import { bold, dim, green, red } from "kleur/colors";
 import StackUtils from "stack-utils";
 
 /**
@@ -119,7 +121,7 @@ export default class TestDirector {
     });
 
     for (const [name, test] of this.tests) {
-      console.group(`\nTest: ${kleur.bold(name)}`);
+      console.group(`\nTest: ${bold(name)}`);
 
       try {
         await test();
@@ -127,7 +129,7 @@ export default class TestDirector {
       } catch (error) {
         if (error instanceof Error) {
           console.error(
-            `\n${kleur.red(
+            `\n${red(
               error.code === "ERR_ASSERTION" &&
                 // A manually specified message should be displayed verbatim.
                 error.generatedMessage
@@ -160,9 +162,9 @@ export default class TestDirector {
 
             // Sometimes nothing remains of the stack after cleaning, e.g. for
             // filesystem errors that have an identical error message and stack.
-            if (cleanStack) console.error(`\n${kleur.dim().red(cleanStack)}`);
+            if (cleanStack) console.error(`\n${dim(red(cleanStack))}`);
           }
-        } else console.error(`\n${kleur.red(inspect(error))}`);
+        } else console.error(`\n${red(inspect(error))}`);
       } finally {
         console.groupEnd();
       }
@@ -171,13 +173,13 @@ export default class TestDirector {
     const summary = `${passCount}/${this.tests.size} tests passed.`;
 
     if (passCount < this.tests.size) {
-      const message = kleur.bold().red(summary);
+      const message = bold(red(summary));
 
       if (throwOnFailure) throw new Error(message);
 
       console.error(`\n${message}\n`);
 
       process.exitCode = 1;
-    } else console.info(`\n${kleur.bold().green(summary)}\n`);
+    } else console.info(`\n${bold(green(summary))}\n`);
   }
 }

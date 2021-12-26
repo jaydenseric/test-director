@@ -12,6 +12,7 @@
 ### Patch
 
 - Simplified package scripts.
+- Stopped using the [`kleur`](https://npm.im/kleur) chaining API.
 - Configured Prettier option `singleQuote` to the default, `false`.
 - Documentation tweaks.
 

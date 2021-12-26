@@ -2,7 +2,7 @@
   [31mMessage.[39m
   
   [2m[31mfile://test/fixtures/fails.mjs:7:9
-  file://test/fixtures/fails.mjs:49:7[22m[39m
+  file://test/fixtures/fails.mjs:49:7[39m[22m
   
   [31mMessage.[39m
   
@@ -13,12 +13,12 @@
   0 !== 1[39m
   
   [2m[31mfile://test/fixtures/fails.mjs:26:3
-  file://test/fixtures/fails.mjs:49:7[22m[39m
+  file://test/fixtures/fails.mjs:49:7[39m[22m
   
   [31mMessage.[39m
   
   [2m[31mfile://test/fixtures/fails.mjs:30:3
-  file://test/fixtures/fails.mjs:49:7[22m[39m
+  file://test/fixtures/fails.mjs:49:7[39m[22m
   
   [31m{ message: 'Message.' }[39m
   
@@ -28,5 +28,5 @@
   
   [31mnull[39m
 
-[1m[31m0/9 tests passed.[22m[39m
+[1m[31m0/9 tests passed.[39m[22m
 
