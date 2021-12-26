@@ -1,5 +1,12 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Moved [`@types/node`](https://npm.im/@types/node) from package `devDependencies` to `dependencies`, using `*` for the version.
+- Moved [`@types/stack-utils`](https://npm.im/@types/stack-utils) from package `devDependencies` to `dependencies`.
+
 ## 8.0.0
 
 ### Major

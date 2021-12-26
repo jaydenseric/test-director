@@ -32,12 +32,12 @@
     "node": "^12.22.0 || ^14.17.0 || >= 16.0.0"
   },
   "dependencies": {
+    "@types/node": "*",
+    "@types/stack-utils": "^2.0.1",
     "kleur": "^4.1.4",
     "stack-utils": "^2.0.5"
   },
   "devDependencies": {
-    "@types/node": "^17.0.4",
-    "@types/stack-utils": "^2.0.1",
     "coverage-node": "^5.0.1",
     "eslint": "^8.5.0",
     "eslint-config-env": "^23.0.1",
