@@ -1,6 +1,7 @@
 // @ts-check
 
 import { strictEqual } from "assert";
+
 import TestDirector from "../../TestDirector.mjs";
 
 const tests = new TestDirector();

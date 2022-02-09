@@ -1,11 +1,9 @@
 // @ts-check
 
 import { AssertionError } from "assert";
-import { inspect } from "util";
-// See: https://github.com/mysticatea/eslint-plugin-node/issues/258
-// eslint-disable-next-line node/file-extension-in-import
 import { bold, dim, green, red } from "kleur/colors";
 import StackUtils from "stack-utils";
+import { inspect } from "util";
 
 /**
  * An ultra lightweight unit test director for Node.js.

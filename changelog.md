@@ -5,6 +5,7 @@
 ### Patch
 
 - Updated dev dependencies.
+- Simplified dev dependencies and config for ESLint.
 
 ## 8.0.1
 

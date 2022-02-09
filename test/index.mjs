@@ -2,8 +2,9 @@
 
 import { strictEqual, throws } from "assert";
 import { spawnSync } from "child_process";
-import { fileURLToPath } from "url";
 import assertSnapshot from "snapshot-assertion";
+import { fileURLToPath } from "url";
+
 import TestDirector from "../TestDirector.mjs";
 import simulatePublishedTraces from "./simulatePublishedTraces.mjs";
 

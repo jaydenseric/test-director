@@ -1,8 +1,8 @@
   
   [31mMessage.[39m
   
-  [2m[31mfile://test/fixtures/fails.mjs:9:9
-  file://test/fixtures/fails.mjs:51:7[39m[22m
+  [2m[31mfile://test/fixtures/fails.mjs:10:9
+  file://test/fixtures/fails.mjs:52:7[39m[22m
   
   [31mMessage.[39m
   
@@ -12,13 +12,13 @@
   
   0 !== 1[39m
   
-  [2m[31mfile://test/fixtures/fails.mjs:28:3
-  file://test/fixtures/fails.mjs:51:7[39m[22m
+  [2m[31mfile://test/fixtures/fails.mjs:29:3
+  file://test/fixtures/fails.mjs:52:7[39m[22m
   
   [31mMessage.[39m
   
-  [2m[31mfile://test/fixtures/fails.mjs:32:3
-  file://test/fixtures/fails.mjs:51:7[39m[22m
+  [2m[31mfile://test/fixtures/fails.mjs:33:3
+  file://test/fixtures/fails.mjs:52:7[39m[22m
   
   [31m{ message: 'Message.' }[39m
   
