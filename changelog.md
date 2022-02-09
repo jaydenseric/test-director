@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Updated dev dependencies.
+
 ## 8.0.1
 
 ### Patch
