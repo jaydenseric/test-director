@@ -52,7 +52,7 @@
     "eslint": "eslint .",
     "prettier": "prettier -c .",
     "types": "tsc -p jsconfig.json",
-    "tests": "coverage-node test/index.mjs",
+    "tests": "coverage-node test.mjs",
     "test": "npm run eslint && npm run prettier && npm run types && npm run docs-check && npm run tests",
     "prepublishOnly": "npm test"
   }

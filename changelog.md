@@ -7,6 +7,7 @@
 - Updated dev dependencies.
 - Simplified dev dependencies and config for ESLint.
 - Updated `jsconfig.json` to disable TypeScript automatic type acquisition for the project.
+- Moved the test index module.
 
 ## 8.0.1
 
