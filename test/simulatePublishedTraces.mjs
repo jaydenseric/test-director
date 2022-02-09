@@ -14,7 +14,6 @@
  * coverage doesn’t work as it’s a copy of the code that runs.
  * @param {string} output Console output.
  * @returns {string} Simulated output.
- * @ignore
  */
 export default function simulatePublishedTraces(output) {
   return output.replace(

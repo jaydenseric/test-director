@@ -186,7 +186,6 @@ const tests = [
 /**
  * Runs the tests.
  * @returns {Promise<void>} Resolves once tests are done.
- * @ignore
  */
 async function test() {
   for (const test of tests)

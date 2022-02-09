@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Removed redundant JSDoc `@ignore` tags.
+
 ## 8.0.2
 
 ### Patch
