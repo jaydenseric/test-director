@@ -16,124 +16,74 @@ To install with [npm](https://npmjs.com/get-npm), run:
 npm install test-director --save-dev
 ```
 
+## Examples
+
+A sync test:
+
+```js
+import { equal } from "assert";
+import TestDirector from "test-director";
+
+const tests = new TestDirector();
+
+tests.add("JavaScript addition.", () => {
+  equal(1 + 1, 2);
+});
+
+tests.run();
+```
+
+An async test:
+
+```js
+import { ok } from "assert";
+import fetch from "node-fetch";
+import TestDirector from "test-director";
+
+const tests = new TestDirector();
+
+tests.add("GitHub is up.", async () => {
+  const response = await fetch("https://github.com");
+  ok(response.ok);
+});
+
+tests.run();
+```
+
+Nested tests:
+
+```js
+import TestDirector from "test-director";
+
+const tests = new TestDirector();
+
+tests.add("Test A.", async () => {
+  const tests = new TestDirector();
+
+  tests.add("Test B.", () => {
+    // …
+  });
+
+  tests.add("Test C.", () => {
+    // …
+  });
+
+  await tests.run(true);
+});
+
+tests.add("Test D.", () => {
+  // …
+});
+
+tests.run();
+```
+
 ## Requirements
 
 - [Node.js](https://nodejs.org): `^12.22.0 || ^14.17.0 || >= 16.0.0`
 
-## API
+## Exports
 
-- [class TestDirector](#class-testdirector)
-  - [TestDirector instance method add](#testdirector-instance-method-add)
-  - [TestDirector instance method run](#testdirector-instance-method-run)
-  - [TestDirector instance property tests](#testdirector-instance-property-tests)
+These ECMAScript modules are published to [npm](https://npmjs.com) and exported via the [`package.json`](./package.json) `exports` field:
 
-### class TestDirector
-
-An ultra lightweight unit test director for Node.js.
-
-#### Examples
-
-_Ways to import._
-
-> ```js
-> import TestDirector from "test-director";
-> ```
->
-> ```js
-> import TestDirector from "test-director/TestDirector.mjs";
-> ```
-
-_How to construct a new instance._
-
-> ```js
-> const tests = new TestDirector();
-> ```
-
-#### TestDirector instance method add
-
-Adds a test.
-
-| Parameter | Type     | Description                          |
-| :-------- | :------- | :----------------------------------- |
-| `name`    | string   | Unique test name.                    |
-| `test`    | Function | Test to run; may return a `Promise`. |
-
-##### Examples
-
-_A sync test._
-
-> ```js
-> import { equal } from "assert";
-> import TestDirector from "test-director";
->
-> const tests = new TestDirector();
->
-> tests.add("JavaScript addition.", () => {
->   equal(1 + 1, 2);
-> });
->
-> tests.run();
-> ```
-
-_An async test._
-
-> ```js
-> import { ok } from "assert";
-> import fetch from "node-fetch";
-> import TestDirector from "test-director";
->
-> const tests = new TestDirector();
->
-> tests.add("GitHub is up.", async () => {
->   const response = await fetch("https://github.com");
->   ok(response.ok);
-> });
->
-> tests.run();
-> ```
-
-#### TestDirector instance method run
-
-Runs the tests one after another, in the order they were added.
-
-| Parameter | Type | Description |
-| :-- | :-- | :-- |
-| `throwOnFailure` | boolean? = `false` | After tests run, throw an error if&#xA;some failed. Defaults to `false`. |
-
-**Returns:** Promise\<void> — Resolves once tests have run.
-
-##### Examples
-
-_Run nested tests._
-
-> ```js
-> import TestDirector from "test-director";
->
-> const tests = new TestDirector();
->
-> tests.add("Test A.", async () => {
->   const tests = new TestDirector();
->
->   tests.add("Test B.", () => {
->     // …
->   });
->
->   tests.add("Test C.", () => {
->     // …
->   });
->
->   await tests.run(true);
-> });
->
-> tests.add("Test D.", () => {
->   // …
-> });
->
-> tests.run();
-> ```
-
-#### TestDirector instance property tests
-
-A map of test functions that have been added, keyed by their test names.
-
-**Type:** Map\<string, Function>
+- [`TestDirector.mjs`](./TestDirector.mjs)

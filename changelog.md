@@ -6,6 +6,7 @@
 
 - Updated dev dependencies.
 - Simplified dev dependencies and config for ESLint.
+- Removed the [`jsdoc-md`](https://npm.im/jsdoc-md) dev dependency and the related package scripts, replacing the readme “API” section with manually written “Examples” and “Exports” sections.
 - Updated `jsconfig.json` to disable TypeScript automatic type acquisition for the project.
 - Moved the test index module.
 

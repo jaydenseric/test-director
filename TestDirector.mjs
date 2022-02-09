@@ -5,29 +5,11 @@ import { bold, dim, green, red } from "kleur/colors";
 import StackUtils from "stack-utils";
 import { inspect } from "util";
 
-/**
- * An ultra lightweight unit test director for Node.js.
- * @kind class
- * @name TestDirector
- * @example <caption>Ways to import.</caption>
- * ```js
- * import TestDirector from "test-director";
- * ```
- *
- * ```js
- * import TestDirector from "test-director/TestDirector.mjs";
- * ```
- * @example <caption>How to construct a new instance.</caption>
- * ```js
- * const tests = new TestDirector();
- * ```
- */
+/** An ultra lightweight unit test director for Node.js. */
 export default class TestDirector {
   constructor() {
     /**
      * A map of test functions that have been added, keyed by their test names.
-     * @kind member
-     * @name TestDirector#tests
      * @type {Map<string, Function>}
      */
     this.tests = new Map();
@@ -35,11 +17,11 @@ export default class TestDirector {
 
   /**
    * Adds a test.
-   * @kind function
-   * @name TestDirector#add
    * @param {string} name Unique test name.
    * @param {Function} test Test to run; may return a `Promise`.
-   * @example <caption>A sync test.</caption>
+   * @example
+   * A sync test:
+   *
    * ```js
    * import { equal } from "assert";
    * import TestDirector from "test-director";
@@ -52,7 +34,9 @@ export default class TestDirector {
    *
    * tests.run();
    * ```
-   * @example <caption>An async test.</caption>
+   * @example
+   * An async test:
+   *
    * ```js
    * import { ok } from "assert";
    * import fetch from "node-fetch";
@@ -83,12 +67,12 @@ export default class TestDirector {
 
   /**
    * Runs the tests one after another, in the order they were added.
-   * @kind function
-   * @name TestDirector#run
-   * @param {boolean} [throwOnFailure=false] After tests run, throw an error if
-   *   some failed. Defaults to `false`.
+   * @param {boolean} [throwOnFailure] After tests run, throw an error if some
+   *   failed. Defaults to `false`.
    * @returns {Promise<void>} Resolves once tests have run.
-   * @example <caption>Run nested tests.</caption>
+   * @example
+   * Nested tests:
+   *
    * ```js
    * import TestDirector from "test-director";
    *
