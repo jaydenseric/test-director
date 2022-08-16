@@ -4,6 +4,10 @@
 
 ### Patch
 
+- Updated dependencies.
+- Updated `jsconfig.json`:
+  - Set `compilerOptions.maxNodeModuleJsDepth` to `10`.
+  - Set `compilerOptions.module` to `nodenext`.
 - Removed redundant JSDoc `@ignore` tags.
 
 ## 8.0.2
