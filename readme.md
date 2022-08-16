@@ -1,7 +1,5 @@
 # test-director
 
-[![npm version](https://badgen.net/npm/v/test-director)](https://npm.im/test-director) [![CI status](https://github.com/jaydenseric/test-director/workflows/CI/badge.svg)](https://github.com/jaydenseric/test-director/actions)
-
 An ultra lightweight unit test director for Node.js.
 
 Works well with any assertion library that throws errors, such as the [Node.js `assert` API](https://nodejs.org/api/assert.html) and [`snapshot-assertion`](https://npm.im/snapshot-assertion).
@@ -10,7 +8,7 @@ Use [`coverage-node`](https://npm.im/coverage-node) to run your test script and 
 
 ## Installation
 
-To install with [npm](https://npmjs.com/get-npm), run:
+To install [`test-director`](https://npm.im/test-director) with [npm](https://npmjs.com/get-npm), run:
 
 ```sh
 npm install test-director --save-dev
@@ -80,10 +78,18 @@ tests.run();
 
 ## Requirements
 
-- [Node.js](https://nodejs.org): `^14.17.0 || ^16.0.0 || >= 18.0.0`
+Supported runtime environments:
+
+- [Node.js](https://nodejs.org) versions `^14.17.0 || ^16.0.0 || >= 18.0.0`.
+
+Projects must configure [TypeScript](https://typescriptlang.org) to use types from the ECMAScript modules that have a `// @ts-check` comment:
+
+- [`compilerOptions.allowJs`](https://typescriptlang.org/tsconfig#allowJs) should be `true`.
+- [`compilerOptions.maxNodeModuleJsDepth`](https://typescriptlang.org/tsconfig#maxNodeModuleJsDepth) should be reasonably large, e.g. `10`.
+- [`compilerOptions.module`](https://typescriptlang.org/tsconfig#module) should be `"node16"` or `"nodenext"`.
 
 ## Exports
 
-These ECMAScript modules are published to [npm](https://npmjs.com) and exported via the [`package.json`](./package.json) `exports` field:
+The [npm](https://npmjs.com) package [`test-director`](https://npm.im/test-director) features [optimal JavaScript module design](https://jaydenseric.com/blog/optimal-javascript-module-design). These ECMAScript modules are exported via the [`package.json`](./package.json) field [`exports`](https://nodejs.org/api/packages.html#exports):
 
 - [`TestDirector.mjs`](./TestDirector.mjs)
