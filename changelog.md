@@ -9,6 +9,8 @@
 ### Patch
 
 - Updated dependencies.
+- Removed the [`@types/stack-utils`](https://npm.im/@types/stack-utils) and [`stack-utils`](https://npm.im/stack-utils) dependencies; error details are now output in a much simpler and more reliable way.
+- Added a new [`replace-stack-traces`](https://npm.im/replace-stack-traces) dev dependency for replacing error stack traces in test snapshots, and removed the test helper function `simulatePublishedTraces`.
 - Updated `jsconfig.json`:
   - Set `compilerOptions.maxNodeModuleJsDepth` to `10`.
   - Set `compilerOptions.module` to `nodenext`.

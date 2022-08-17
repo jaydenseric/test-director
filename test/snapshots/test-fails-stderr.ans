@@ -1,24 +1,19 @@
   
-  [31mMessage.[39m
-  
-  [2m[31mfile://test/fixtures/fails.mjs:10:9
-  file://test/fixtures/fails.mjs:52:7[39m[22m
+  [31mError: Message.
+      <stack trace>[39m
   
   [31mMessage.[39m
   
-  [31mMessage.[39m
+  [31m[Error: Message.][39m
   
-  [31mExpected values to be strictly equal:
+  [31mAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
   
-  0 !== 1[39m
+  0 !== 1
   
-  [2m[31mfile://test/fixtures/fails.mjs:29:3
-  file://test/fixtures/fails.mjs:52:7[39m[22m
+      <stack trace>[39m
   
-  [31mMessage.[39m
-  
-  [2m[31mfile://test/fixtures/fails.mjs:33:3
-  file://test/fixtures/fails.mjs:52:7[39m[22m
+  [31mAssertionError [ERR_ASSERTION]: Message.
+      <stack trace>[39m
   
   [31m{ message: 'Message.' }[39m
   

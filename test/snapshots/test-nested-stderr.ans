@@ -1,14 +1,9 @@
     
-    [31mMessage.[39m
-    
-    [2m[31mfile://test/fixtures/nested.mjs:11:11
-    file://test/fixtures/nested.mjs:14:15
-    file://test/fixtures/nested.mjs:17:7[39m[22m
+    [31mError: Message.
+        <stack trace>[39m
   
-  [31m[1m[31m0/1 tests passed.[39m[31m[22m[39m
-  
-  file://test/fixtures/nested.mjs:14:15
-  file://test/fixtures/nested.mjs:17:7[39m[22m
+  [31mError: [1m[31m0/1 tests passed.[39m[31m[22m
+      <stack trace>[39m
 
 [1m[31m0/1 tests passed.[39m[22m
 

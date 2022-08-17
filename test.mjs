@@ -2,10 +2,10 @@
 
 import { strictEqual, throws } from "assert";
 import { spawnSync } from "child_process";
+import replaceStackTraces from "replace-stack-traces";
 import assertSnapshot from "snapshot-assertion";
 import { fileURLToPath } from "url";
 
-import simulatePublishedTraces from "./test/simulatePublishedTraces.mjs";
 import TestDirector from "./TestDirector.mjs";
 
 const tests = [
@@ -146,7 +146,7 @@ const tests = [
     );
 
     await assertSnapshot(
-      simulatePublishedTraces(stderr.toString()),
+      replaceStackTraces(stderr.toString()),
       new URL("./test/snapshots/test-fails-stderr.ans", import.meta.url)
     );
 
@@ -175,7 +175,7 @@ const tests = [
     );
 
     await assertSnapshot(
-      simulatePublishedTraces(stderr.toString()),
+      replaceStackTraces(stderr.toString()),
       new URL("./test/snapshots/test-nested-stderr.ans", import.meta.url)
     );
 

@@ -33,15 +33,14 @@
   },
   "dependencies": {
     "@types/node": "*",
-    "@types/stack-utils": "^2.0.1",
-    "kleur": "^4.1.5",
-    "stack-utils": "^2.0.5"
+    "kleur": "^4.1.5"
   },
   "devDependencies": {
     "coverage-node": "^6.1.0",
     "eslint": "^8.22.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.7.1",
+    "replace-stack-traces": "^2.0.0",
     "snapshot-assertion": "^4.0.2",
     "typescript": "^4.7.4"
   },
