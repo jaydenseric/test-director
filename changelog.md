@@ -1,5 +1,11 @@
 # test-director changelog
 
+## Next
+
+### Patch
+
+- Updated dev dependencies.
+
 ## 9.0.0
 
 ### Major

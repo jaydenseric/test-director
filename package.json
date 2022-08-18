@@ -36,7 +36,7 @@
     "kleur": "^4.1.5"
   },
   "devDependencies": {
-    "coverage-node": "^6.1.0",
+    "coverage-node": "^8.0.0",
     "eslint": "^8.22.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.7.1",
