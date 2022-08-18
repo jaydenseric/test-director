@@ -22,7 +22,6 @@
     "TestDirector.mjs"
   ],
   "sideEffects": false,
-  "main": "./TestDirector.mjs",
   "exports": {
     ".": "./TestDirector.mjs",
     "./package.json": "./package.json",

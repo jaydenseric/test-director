@@ -4,6 +4,7 @@
 
 ### Major
 
+- Removed the package `main` field.
 - Use the `node:` URL scheme for Node.js builtin module imports.
 
 ### Patch
