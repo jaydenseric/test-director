@@ -19,7 +19,7 @@ npm install test-director --save-dev
 A sync test:
 
 ```js
-import { equal } from "assert";
+import { equal } from "node:assert";
 import TestDirector from "test-director";
 
 const tests = new TestDirector();
@@ -34,7 +34,7 @@ tests.run();
 An async test:
 
 ```js
-import { ok } from "assert";
+import { ok } from "node:assert";
 import fetch from "node-fetch";
 import TestDirector from "test-director";
 

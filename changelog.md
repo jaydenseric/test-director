@@ -2,6 +2,10 @@
 
 ## Next
 
+### Major
+
+- Use the `node:` URL scheme for Node.js builtin module imports.
+
 ### Patch
 
 - Updated dev dependencies.

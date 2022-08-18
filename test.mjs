@@ -1,10 +1,10 @@
 // @ts-check
 
-import { strictEqual, throws } from "assert";
-import { spawnSync } from "child_process";
+import { strictEqual, throws } from "node:assert";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import replaceStackTraces from "replace-stack-traces";
 import assertSnapshot from "snapshot-assertion";
-import { fileURLToPath } from "url";
 
 import TestDirector from "./TestDirector.mjs";
 

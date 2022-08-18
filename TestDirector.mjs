@@ -1,7 +1,7 @@
 // @ts-check
 
 import { bold, green, red } from "kleur/colors";
-import { inspect } from "util";
+import { inspect } from "node:util";
 
 /** An ultra lightweight unit test director for Node.js. */
 export default class TestDirector {
@@ -21,7 +21,7 @@ export default class TestDirector {
    * A sync test:
    *
    * ```js
-   * import { equal } from "assert";
+   * import { equal } from "node:assert";
    * import TestDirector from "test-director";
    *
    * const tests = new TestDirector();
@@ -36,7 +36,7 @@ export default class TestDirector {
    * An async test:
    *
    * ```js
-   * import { ok } from "assert";
+   * import { ok } from "node:assert";
    * import fetch from "node-fetch";
    * import TestDirector from "test-director";
    *
