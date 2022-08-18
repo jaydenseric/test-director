@@ -5,6 +5,7 @@
 ### Patch
 
 - Updated dev dependencies.
+- Improved the installation instructions in the readme.
 
 ## 10.0.0
 

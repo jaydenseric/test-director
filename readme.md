@@ -14,6 +14,8 @@ To install [`test-director`](https://npm.im/test-director) with [npm](https://np
 npm install test-director --save-dev
 ```
 
+Then, import and use the class [`TestDirector`](./TestDirector.mjs).
+
 ## Examples
 
 A sync test:
