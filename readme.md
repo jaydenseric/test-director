@@ -37,7 +37,6 @@ An async test:
 
 ```js
 import { ok } from "node:assert";
-import fetch from "node-fetch";
 import TestDirector from "test-director";
 
 const tests = new TestDirector();

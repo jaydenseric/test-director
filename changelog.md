@@ -6,6 +6,7 @@
 
 - Updated dev dependencies.
 - Improved the installation instructions in the readme.
+- Remove [`node-fetch`](https://npm.im/node-fetch) from code examples. Modern Node.js supports the `fetch` global.
 
 ## 10.0.0
 

@@ -38,7 +38,6 @@ export default class TestDirector {
    *
    * ```js
    * import { ok } from "node:assert";
-   * import fetch from "node-fetch";
    * import TestDirector from "test-director";
    *
    * const tests = new TestDirector();
