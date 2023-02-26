@@ -1,7 +1,8 @@
 // @ts-check
 
-import { bold, green, red } from "kleur/colors";
 import { inspect } from "node:util";
+
+import { bold, green, red } from "kleur/colors";
 
 /** An ultra lightweight unit test director for Node.js. */
 export default class TestDirector {
