@@ -19,6 +19,7 @@
     "mjs"
   ],
   "files": [
+    "reportError.mjs",
     "TestDirector.mjs"
   ],
   "sideEffects": false,
@@ -28,7 +29,7 @@
     "./TestDirector.mjs": "./TestDirector.mjs"
   },
   "engines": {
-    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+    "node": "^16.9.0 || >= 18.0.0"
   },
   "dependencies": {
     "@types/node": "*",

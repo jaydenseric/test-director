@@ -16,3 +16,25 @@ Test: [1mg[22m
 Test: [1mh[22m
 
 Test: [1mi[22m
+
+Test: [1mj[22m
+  
+  [31mCause:[39m
+    
+    [31mCause:[39m
+
+Test: [1mk[22m
+  
+  [31mCause:[39m
+
+Test: [1ml[22m
+
+Test: [1mm[22m
+  
+  [31mAggregate errors:[39m
+    
+    [31mCause:[39m
+    
+    [31mAggregate errors:[39m
+      
+      [31mCause:[39m

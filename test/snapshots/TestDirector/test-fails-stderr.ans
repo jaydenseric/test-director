@@ -22,6 +22,48 @@
   [31m'Message.'[39m
   
   [31mnull[39m
+  
+  [31mError: Message C.
+      <stack trace>[39m
+    
+    [31mError: Message B.
+        <stack trace>[39m
+      
+      [31mError: Message A.
+          <stack trace>[39m
+  
+  [31mError: Message B.
+      <stack trace>[39m
+    
+    [31mAggregateError: Message A.
+        <stack trace>[39m
+  
+  [31mAggregateError: Message A.
+      <stack trace>[39m
+  
+  [31mAggregateError: Message H.
+      <stack trace>[39m
+    
+    [31mError: Message A.
+        <stack trace>[39m
+    
+    [31mError: Message C.
+        <stack trace>[39m
+      
+      [31mError: Message B.
+          <stack trace>[39m
+    
+    [31mAggregateError: Message G.
+        <stack trace>[39m
+      
+      [31mError: Message D.
+          <stack trace>[39m
+      
+      [31mError: Message F.
+          <stack trace>[39m
+        
+        [31mError: Message E.
+            <stack trace>[39m
 
-[1m[31m0/9 tests passed.[39m[22m
+[1m[31m0/13 tests passed.[39m[22m
 

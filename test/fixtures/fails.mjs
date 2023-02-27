@@ -49,4 +49,43 @@ tests.add("i", () => {
   throw null;
 });
 
+tests.add("j", () => {
+  throw new Error("Message C.", {
+    cause: new Error("Message B.", {
+      cause: new Error("Message A."),
+    }),
+  });
+});
+
+tests.add("k", () => {
+  throw new Error("Message B.", {
+    cause: new AggregateError([], "Message A."),
+  });
+});
+
+tests.add("l", () => {
+  throw new AggregateError([], "Message A.");
+});
+
+tests.add("m", () => {
+  throw new AggregateError(
+    [
+      new Error("Message A."),
+      new Error("Message C.", {
+        cause: new Error("Message B."),
+      }),
+      new AggregateError(
+        [
+          new Error("Message D."),
+          new Error("Message F.", {
+            cause: new Error("Message E."),
+          }),
+        ],
+        "Message G."
+      ),
+    ],
+    "Message H."
+  );
+});
+
 tests.run();

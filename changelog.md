@@ -2,6 +2,12 @@
 
 ## Next
 
+### Major
+
+- Updated Node.js support to `^16.9.0 || >= 18.0.0`.
+- Tests now report a thrown `AggregateError` instance property `errors`.
+- Tests now report a thrown `Error` instance property `cause`.
+
 ### Patch
 
 - Updated dev dependencies.

@@ -1,8 +1,8 @@
 // @ts-check
 
-import { inspect } from "node:util";
-
 import { bold, green, red } from "kleur/colors";
+
+import reportError from "./reportError.mjs";
 
 /** An ultra lightweight unit test director for Node.js. */
 export default class TestDirector {
@@ -107,11 +107,7 @@ export default class TestDirector {
         await test();
         passCount++;
       } catch (error) {
-        console.error(
-          `\n${red(
-            error instanceof Error && error.stack ? error.stack : inspect(error)
-          )}`
-        );
+        reportError(error);
       } finally {
         console.groupEnd();
       }
