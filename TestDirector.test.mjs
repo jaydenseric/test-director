@@ -64,7 +64,10 @@ export default function test_TestDirector(tests) {
 
     await assertSnapshot(
       stdout.toString(),
-      new URL("./test/snapshots/test-passes-stdout.ans", import.meta.url)
+      new URL(
+        "./test/snapshots/TestDirector/test-passes-stdout.ans",
+        import.meta.url
+      )
     );
 
     strictEqual(stderr.toString(), "");
@@ -87,7 +90,10 @@ export default function test_TestDirector(tests) {
 
     await assertSnapshot(
       stdout.toString(),
-      new URL("./test/snapshots/test-outputs-stdout.ans", import.meta.url)
+      new URL(
+        "./test/snapshots/TestDirector/test-outputs-stdout.ans",
+        import.meta.url
+      )
     );
 
     strictEqual(stderr.toString(), "");
@@ -110,7 +116,10 @@ export default function test_TestDirector(tests) {
 
     await assertSnapshot(
       stdout.toString(),
-      new URL("./test/snapshots/test-sequence-stdout.ans", import.meta.url)
+      new URL(
+        "./test/snapshots/TestDirector/test-sequence-stdout.ans",
+        import.meta.url
+      )
     );
 
     strictEqual(stderr.toString(), "");
@@ -133,12 +142,18 @@ export default function test_TestDirector(tests) {
 
     await assertSnapshot(
       stdout.toString(),
-      new URL("./test/snapshots/test-fails-stdout.ans", import.meta.url)
+      new URL(
+        "./test/snapshots/TestDirector/test-fails-stdout.ans",
+        import.meta.url
+      )
     );
 
     await assertSnapshot(
       replaceStackTraces(stderr.toString()),
-      new URL("./test/snapshots/test-fails-stderr.ans", import.meta.url)
+      new URL(
+        "./test/snapshots/TestDirector/test-fails-stderr.ans",
+        import.meta.url
+      )
     );
 
     strictEqual(status, 1);
@@ -160,12 +175,18 @@ export default function test_TestDirector(tests) {
 
     await assertSnapshot(
       stdout.toString(),
-      new URL("./test/snapshots/test-nested-stdout.ans", import.meta.url)
+      new URL(
+        "./test/snapshots/TestDirector/test-nested-stdout.ans",
+        import.meta.url
+      )
     );
 
     await assertSnapshot(
       replaceStackTraces(stderr.toString()),
-      new URL("./test/snapshots/test-nested-stderr.ans", import.meta.url)
+      new URL(
+        "./test/snapshots/TestDirector/test-nested-stderr.ans",
+        import.meta.url
+      )
     );
 
     strictEqual(status, 1);
